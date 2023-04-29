@@ -1,0 +1,80 @@
+﻿@model ProjectDATN.Data.Entities.Product
+@{
+    ViewData["Title"] = "Create";
+
+}
+<h1>Thêm mới sản phẩm</h1>
+
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="Product" asp-area="Admin" enctype="multipart/form-data">
+            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div class="form-group">
+                <label class="control-label">Product Name</label>
+                <input asp-area="Admin" asp-for="ProName" class="form-control" />
+                <span asp-validation-for="ProName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Description</label>
+                <textarea asp-area="Admin" asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select asp-for="CateID" asp-items="@ViewBag.listCategories" class="form-control">
+                    <option disabled selected>--Select Category--</option>
+                </select>
+                <span asp-validation-for="CateID" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label>Bradn</label>
+                <select asp-for="BandID" asp-items="@ViewBag.listBrands" class="form-control">
+                    <option disabled selected>--Select Brand--</option>
+                </select>
+                <span asp-validation-for="BandID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Quantity</label>
+                <input type="number" asp-area="Admin" asp-for="Quality" class="form-control" />
+                <span asp-validation-for="Quality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Price</label>
+                <input type="number" asp-area="Admin" asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label class="control-label">PerchasePrice</label>
+                <input type="number" asp-area="Admin" asp-for="PerchasePrice" class="form-control" />
+                <span asp-validation-for="PerchasePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Image</label>
+                <img width="150" id="image"/>
+                <input type="file" asp-area="Admin" asp-for="ImageFile" class="form-control" id="uploadImage"/>
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-area="Admin" asp-action="Index" asp-controller="Product" class="btn btn-light">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function(){
+            $('#uploadImage').on('change', function(){
+                var imgSrc = window.URL.createObjectURL(this.files[0]);
+                $('#image').attr('src', imgSrc);
+            })
+        });
+    </script>
+}
+

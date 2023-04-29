@@ -1,0 +1,53 @@
+﻿@using ProjectDATN.Data.Enums;
+@model ProjectDATN.Data.Entities.PromotionV1
+@{
+    ViewData["Title"] = "Update";
+
+}
+<h1>Sửa Khuyến mại</h1>
+
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" asp-controller="Promotion" asp-area="Admin" enctype="multipart/form-data">
+            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label>Sản phẩm</label>
+                <select asp-for="ProId" asp-items="@ViewBag.Products" class="form-control">
+                    <option disabled selected>--Select Product--</option>
+                </select>
+                <span asp-validation-for="ProId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Loại khuyến mại</label>
+                <select asp-for="Promo" asp-items="Html.GetEnumSelectList<KM>()" class="form-control">
+                    <option disabled selected>--Chọn loại khuyến mại--</option>
+                </select>
+                <span asp-validation-for="Promo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Start at</label>
+                <input type="datetime-local" asp-area="Admin" asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Finish at</label>
+                <input type="datetime-local" asp-area="Admin" asp-for="Finish" class="form-control" />
+                <span asp-validation-for="Finish" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Sửa" class="btn btn-primary" />
+                <a asp-area="Admin" asp-action="Index" asp-controller="Promotion" class="btn btn-light">Quay lại danh sách khuyến mại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

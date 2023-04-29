@@ -1,0 +1,75 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+@model IPagedList<ProjectDATN.Data.Entities.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int intSno = 0;
+}
+<h3>Danh sách danh mục</h3>
+<div class="col-4 p-0 justify-content-end">
+    <form asp-action="Index" asp-controller="Categories">
+        <span class="btn-group">
+            <input class="form-control" type="text" name="SearchText" placeholder="Tìm kiếm" />
+            <input class="p-1 m-lg-2 btn btn-sm btn-info" type="submit" value="Search" />
+        </span>
+    </form>
+</div>
+<div style="text-align:right; width:100%">
+    <a class="btn btn-primary" asp-area="Admin" asp-action="Create" asp-controller="Categories"><i class="bi bi-plus-circle"></i> Thêm mới</a>
+</div>
+<table class="table table-bordered table-striped" width="100%">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên Danh mục</th>
+            <th>Ngày tạo</th>
+            <th>Ngày sửa</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.CateName</td>
+                <td>@item.Created</td>
+                <td>@item.ModifiedDate</td>
+                <td>
+                    <a asp-area="Admin" class="btn btn-primary mx-2" asp-action="Edit" asp-route-id="@item.Id" asp-controller="Categories"><i class="bi bi-pencil-square"></i> Sửa</a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="@("#DeleteCategory-" + item.Id)" data-url="@Url.Action($"Delete/{item.Id}")">Xóa</button>
+                    @await Html.PartialAsync("DeleteCategory",item)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@*<div class="float-right">
+    Page @(Model?.PageCount < Model?.PageNumber ? 0 : Model?.PageNumber) of @Model?.PageCount
+    @Html.PagedListPager(Model ,page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }),
+    new PagedListRenderOptions()
+    {
+    ContainerDivClasses = new List<string> {"blog","navigation"},
+    UlElementClasses = new List<string> {"pagination"},
+    LiElementClasses = new List<string> {"page-item","page-link"},
+    ActiveLiElementClass =  "active",
+    })
+</div>
+*@
+<div class="float-right">
+    @* Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount*@
+    @Html.PagedListPager(Model, page=> Url.Action("Index",new{page}),
+    new PagedListRenderOptions{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+    })
+</div>
+
+  

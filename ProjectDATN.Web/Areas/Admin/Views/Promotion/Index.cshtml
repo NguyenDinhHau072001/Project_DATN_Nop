@@ -1,0 +1,71 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+@model IPagedList<ProjectDATN.Data.ViewModels.PrmotionVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int intSno = 0;
+}
+<h3>Danh sách danh mục</h3>
+<div class="col-4 p-0 justify-content-end">
+    <form asp-action="Index" asp-controller="Promotion">
+        <span class="btn-group">
+            <input class="form-control" type="text" name="SearchText" placeholder="Tìm kiếm" />
+            <input class="p-1 m-lg-2 btn btn-sm btn-info" type="submit" value="Search" />
+        </span>
+    </form>
+</div>
+<div style="text-align:right; width:100%">
+    <a class="btn btn-primary" asp-area="Admin" asp-action="Create" asp-controller="Promotion"><i class="bi bi-plus-circle"></i> Thêm mới</a>
+</div>
+<table class="table table-bordered table-striped" width="100%">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Ảnh sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Loại khuyến mại</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="row-@item.Id">
+                <td>@item.Id</td>
+                <td><img width="100" src="~/uploads/images/product/@item.ProImage" /></td>
+                <td>@item.ProName</td>
+                <td>@item.KM</td>
+                <td>@item.Created</td>
+                <td>@item.Finish</td>
+
+                <td>
+                    <a asp-area="Admin" class="btn btn-primary mx-2" asp-action="Edit" asp-route-id="@item.Id" asp-controller="Promotion"><i class="bi bi-pencil-square"></i> Edit</a>
+                    <a class="btn btn-sm btn-danger btnDelete" asp-area="Admin" class="btn btn-primary mx-2" asp-action="Delete" asp-route-id="@item.Id" asp-controller="Promotion" data-id="@item.Id">
+                        <i class="fas fa-trash"></i>
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="float-right">
+    Page @(Model?.PageCount < Model?.PageNumber ? 0 : Model?.PageNumber) of @Model?.PageCount
+    @Html.PagedListPager(Model ,page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }),
+    new PagedListRenderOptions()
+    {
+    ContainerDivClasses = new List<string> {"blog","navigation"},
+    UlElementClasses = new List<string> {"pagination"},
+    LiElementClasses = new List<string> {"page-item","page-link"},
+    ActiveLiElementClass =  "active",
+    })
+</div>
+

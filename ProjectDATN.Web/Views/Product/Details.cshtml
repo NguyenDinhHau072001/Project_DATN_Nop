@@ -1,0 +1,31 @@
+﻿@model ProjectDATN.Data.Entities.Product
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="padding-bottom:20px">Chi tiết @Model.ProName.ToUpper()</h1>
+<div class="product-preview">
+	<img src="~/uploads/images/product/@Model.Image" alt="" style="width:250px;float:left">
+</div>
+<div class="col-md-5">
+	<div class="product-details">
+		<h2 class="product-name">@Model.ProName</h2>
+		
+		<div>
+			<h3 class="product-price">@Model.PerchasePrice.ToString("#,##0") VND &ensp;&ensp;<del class="product-old-price">@Model.Price.ToString("#,##0") VND</del></h3>
+			
+		</div>
+		<p>@Model.Description</p>
+
+		
+
+		<div class="add-to-cart">
+			<button class="add-to-cart-btn" data-id="@Model.Id"><i class="fa fa-shopping-cart"></i> Thêm giỏ hàng</button>
+		</div>
+
+		
+
+	</div>
+</div>
+

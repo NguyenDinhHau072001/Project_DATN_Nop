@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ProjectDATN.Data.Entities.Brand>
+
+
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="input-checkbox">
+
+            <a asp-action="GetProductByCateId" asp-controller="Product" asp-area="" asp-route-id="@item.Id">
+                <label for="category-1">
+                    <span></span>
+                    @item.Name
+                </label>
+            </a>
+        </div>
+    }
+}

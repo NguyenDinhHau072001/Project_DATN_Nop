@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProjectDATN.Data.ViewModels.ProductVM>
+
+
+
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="product">
+            <div class="product-img">
+                <img src="~/uploads/images/product/@item.Image" alt="" style="height:250px">
+               
+            </div>
+            <div class="product-body">
+                <p class="product-category">Category</p>
+                <h3 class="product-name"><a asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">@item.ProName</a></h3>
+                <h4 class="product-price">@item.PerchasePrice <del class="product-old-price">@item.Price</del></h4>
+                <div class="product-rating">
+                    @*<i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>*@
+                </div>
+                <div class="product-btns">
+                   
+                    <a class="quick-view" asp-action="Details" asp-controller="Product" asp-area="" asp-route-id="@item.Id"><i class="fa fa-eye"></i>Chi tiết</a>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button class="add-to-cart-btn" data-id="@item.Id"><i class="fa fa-shopping-cart"></i> Thêm giỏ hàng</button>
+                <input type="hidden" asp-for="@item.Id">
+            </div>
+        </div>
+    }
+}
+

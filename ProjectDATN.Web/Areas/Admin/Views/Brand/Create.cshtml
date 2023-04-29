@@ -1,0 +1,35 @@
+﻿
+@model ProjectDATN.Data.Entities.Brand
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Thêm mới danh mục</h1>
+
+
+<h1>Create</h1>
+
+<h4>Danh sách thương hiệu</h4>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="Brand" asp-area="Admin">
+            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div class="form-group">
+                <label class="control-label">Brand Name</label>
+                <input asp-area="Admin" asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-area="Admin" asp-action="Index" asp-controller="Brand" class="btn btn-light">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+

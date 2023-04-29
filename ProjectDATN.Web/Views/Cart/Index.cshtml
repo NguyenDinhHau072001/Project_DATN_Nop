@@ -1,0 +1,103 @@
+﻿@model IEnumerable<CartItem>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="cart">
+                    <div class="title">
+                        <div class="row">
+                            <div class="col"><h4><b style="font-size:40px">Shopping Cart</b></h4></div>
+                            @*<div class="col align-self-center text-right text-muted">@Model.Count() Sản phẩm</div>*@
+                        </div>
+                    </div>
+                    <div id="reload">
+                        @await Html.PartialAsync("Partial_View_Cart")
+                    </div>
+                    
+                    <div class="accent-danger"><a asp-action="DeleteAll" asp-controller="Cart" asp-area="">Xóa tất cả</a></div>
+                    <div class="back-to-shop"><a asp-action="Index" asp-controller="Home" style="font-size:18px">&leftarrow; <span class="text-muted">Tiếp tục mua hàng</span></a></div>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <td>
+                            <div><h3><b>Tổng hợp</b></h3></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col">@Model.Count() Sản phẩm</div>
+                            <div class="col text-right">@Model.Sum(x=>x.PriceTotal).ToString("#,##0") VND</div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <p style="font-size:20px">Giao hàng</p>
+                                <select><option class="text-muted" style="font-size:12px">Standard-Delivery- &euro;5.00</option></select>
+
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col">TOTAL PRICE</div>
+                                <div class="col text-right">@Model.Sum(x=>x.PriceTotal).ToString("#,##0") VND</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="col-md-4 summary">
+                    <button class="btn">Thanh Toán</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('body').on('click', '#updateQuantity', function (e) {
+                e.preventDefault();
+                var id = $(this).data("id");
+                var SoLuong = $('#Quantity-' + id).val();
+                $.ajax({
+                    url: '/Cart/Update',
+                    type: 'POST',
+                    data: { id: id, Quantity: SoLuong },
+                    success: function (data) {
+                        console.log(data);
+                        if (data.success) {
+                            loadCart();
+                            $('#cart_count').html(data.soluong);
+                        }
+                    }
+                });
+            });
+        });
+
+        function loadCart() {
+            $.ajax({
+                url: '/Cart/Partial_View_Cart',
+                type: 'GET',
+                success: function (data) {
+                    $("#reload").html(data);
+                }
+            });
+        }
+
+    </script>
+}

@@ -1,0 +1,46 @@
+﻿@model ProjectDATN.Data.Entities.Category
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1>Thêm mới danh mục</h1>
+
+
+<h1>Create</h1>
+
+<h4>Danh sách danh mục</h4>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="Categories" asp-area="Admin">
+            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div class="form-group">
+                <label class="control-label">Category Name</label>
+                <input asp-area="Admin" asp-for="CateName" class="form-control" />
+                <span asp-validation-for="CateName" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label">Slug</label>
+                <input asp-area="Admin" asp-for="Slug" class="form-control" />
+                <span asp-validation-for="Slug" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-area="Admin" asp-action="Index" asp-controller="Categories" class="btn btn-light">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

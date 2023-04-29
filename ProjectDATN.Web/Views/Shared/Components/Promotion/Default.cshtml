@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProjectDATN.Data.ViewModels.PrmotionVM>
+
+<section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <h3>upto 75% off</h3>
+            <p>lorem ipsum dolor sit amet cosectetur adipisicing elit</p>
+            <a href="" class="btn">show now</a>
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model)
+                {
+                        <a href="" class="swiper-slide"><img width="150" src="~/uploads/images/product/@item.ProImage" alt=""></a>
+                }
+
+                @* <a href="" class="swiper-slide"><img src="images/book-2.jpg" alt=""></a>
+                <a href="" class="swiper-slide"><img src="images/book-3.jpg" alt=""></a>
+                <a href="" class="swiper-slide"><img src="images/book-4.jpg" alt=""></a>
+                <a href="" class="swiper-slide"><img src="images/book-5.jpg" alt=""></a>
+                <a href="" class="swiper-slide"><img src="images/book-6.jpg" alt=""></a>*@
+            </div>
+            <img src="" alt="" class="stand">
+        </div>
+    </div>
+</section>

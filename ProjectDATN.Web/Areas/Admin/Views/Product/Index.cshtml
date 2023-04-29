@@ -1,0 +1,88 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+@model IPagedList<ProjectDATN.Data.ViewModels.ProductVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int intSno = 0;
+}
+<h3>Danh sách danh mục</h3>
+<div class="col-4 p-0 justify-content-end">
+    <form asp-action="Index" asp-controller="Product">
+        <span class="btn-group">
+            <input class="form-control" type="text" name="SearchText" placeholder="Tìm kiếm" />
+            <input class="p-1 m-lg-2 btn btn-sm btn-info" type="submit" value="Search" />
+        </span>
+    </form>
+</div>
+<div style="text-align:right; width:100%">
+    <a class="btn btn-primary" asp-area="Admin" asp-action="Create" asp-controller="Product"><i class="bi bi-plus-circle"></i> Thêm mới</a>
+</div>
+<table class="table table-bordered table-striped" width="100%">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Ảnh</th>
+            <th>Tên Sản Phẩm</th>
+            <th>Loại sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Hãng</th>
+            <th>Ngày tạo</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr id="row-@item.Id">
+                <td>@item.Id</td>
+                <td><img width="100" src="~/uploads/images/product/@item.Image" /></td>
+                <td>@item.ProName</td>
+                <td>@item.CateName</td>
+                <td>@item.PerchasePrice</td>
+                <td>@item.Quantity</td>
+                <td>@item.BrandName</td>
+                <td>@item.Created</td>
+            
+                <td style="display: flex">
+                    <a asp-area="Admin" class="btn btn-primary mx-2" asp-action="Update" asp-route-id="@item.Id" asp-controller="Product"><i class="bi bi-pencil-square"></i> Edit</a>
+                    <form id="formDelete" method="post" asp-area="Admin" asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id">
+                        <input type="submit" class="btn btn-danger" value="Xóa">
+                    </form>
+                    @*<button type="button" class="btn btn-danger" data-toggle="modal" data-target="@("#DeleteProduct-" + item.Id)" data-url="@Url.Action($"Delete/{item.Id}")">Xóa</button>*@
+                    @*@await Html.PartialAsync("DeleteProduct",item)*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="float-right">
+    @* Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount*@
+    @Html.PagedListPager(Model, page=> Url.Action("Index",new{page}),
+    new PagedListRenderOptions{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+    })
+</div>
+
+
+@section scripts
+{
+   <script>
+        $(document).ready(function () {
+            $('#formDelete').submit(function () {
+                var c = confirm("Do you want delete this product?");
+                return c; //you can just return c because it will be true or false
+            });
+           
+            
+        });
+   </script>
+}
+
