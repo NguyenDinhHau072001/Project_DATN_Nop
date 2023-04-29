@@ -9,349 +9,349 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectDATN.Web
 build_property.RootNamespace = ProjectDATN.Web
-build_property.ProjectDir = D:\ProjectDATN\ProjectDATN.Web\
+build_property.ProjectDir = D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\ProjectDATN\ProjectDATN.Web
+build_property.MSBuildProjectDirectory = D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Brand/Create.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Brand/DeleteBrand.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Brand/DeleteBrand.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRGVsZXRlQnJhbmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Brand/Edit.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Brand/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Categories/Create.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Categories/DeleteCategory.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Categories/DeleteCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZWxldGVDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Categories/Edit.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Categories/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Home/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Product/Create.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Product/DeleteProduct.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Product/DeleteProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxEZWxldGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Product/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Product/Update.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Product/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Promotion/Create.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Promotion/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvbW90aW9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Promotion/Edit.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Promotion/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvbW90aW9uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Promotion/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Promotion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvbW90aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Shared/Error.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Shared/Paging.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Shared/Paging.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFBhZ2luZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/AccessDenied.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ConfirmEmail.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/Error.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ErrorConfirmEmail.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ErrorConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxFcnJvckNvbmZpcm1FbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ExternalLoginConfirmation.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ExternalLoginConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxFeHRlcm5hbExvZ2luQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ExternalLoginFailure.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ExternalLoginFailure.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxFeHRlcm5hbExvZ2luRmFpbHVyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ForgotPassword.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ForgotPasswordConfirmation.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/Lockout.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/Login.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/Register.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/RegisterConfirmation.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ResetPassword.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/ResetPasswordConfirmation.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/SendCode.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/SendCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxTZW5kQ29kZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/UseRecoveryCode.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/UseRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxVc2VSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/VerifyAuthenticatorCode.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/VerifyAuthenticatorCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxWZXJpZnlBdXRoZW50aWNhdG9yQ29kZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/VerifyCode.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/VerifyCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxWZXJpZnlDb2RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Account/_LoginLayout.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Account/_LoginLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcQWNjb3VudFxfTG9naW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/AddPhoneNumber.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/AddPhoneNumber.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXEFkZFBob25lTnVtYmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/ChangePassword.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/DisplayRecoveryCodes.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/DisplayRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXERpc3BsYXlSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/EditProfile.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/EditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXEVkaXRQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/Error.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/ManageLogins.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/ManageLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXE1hbmFnZUxvZ2lucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/SetPassword.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXFNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Manage/VerifyPhoneNumber.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Manage/VerifyPhoneNumber.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcTWFuYWdlXFZlcmlmeVBob25lTnVtYmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Role/AddRoleClaim.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Role/AddRoleClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcUm9sZVxBZGRSb2xlQ2xhaW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Role/Create.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Role/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Role/Delete.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Role/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcUm9sZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Role/Edit.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Role/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcUm9sZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Role/EditRoleClaim.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Role/EditRoleClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcUm9sZVxFZGl0Um9sZUNsYWltLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/Role/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/User/AddClaim.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/User/AddClaim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcVXNlclxBZGRDbGFpbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/User/AddRole.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/User/AddRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcVXNlclxBZGRSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/User/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/User/SetPassword.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/User/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcVXNlclxTZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/_ViewImports.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Identity/Views/_ViewStart.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Identity/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Cart/CheckOut.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Cart/CheckOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja091dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Cart/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Cart/Partial_View_Cart.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Cart/Partial_View_Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxQYXJ0aWFsX1ZpZXdfQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Contact/Contact.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Contact/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Home/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Home/Privacy.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Product/Details.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Product/GetProductByCateID.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Product/GetProductByCateID.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXRQcm9kdWN0QnlDYXRlSUQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Product/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Promotion/Index.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Promotion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW90aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Components/GetProductByCateId/Default.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Components/GetProductByCateId/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcR2V0UHJvZHVjdEJ5Q2F0ZUlkXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Components/NewProduct/NewProducts.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Components/NewProduct/NewProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3UHJvZHVjdFxOZXdQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Components/NewProduct/TopSale.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Components/NewProduct/TopSale.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3UHJvZHVjdFxUb3BTYWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Components/Promotion/Default.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Components/Promotion/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvbW90aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Components/ViewCategoryAndBrand/Brand.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Components/ViewCategoryAndBrand/Brand.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmlld0NhdGVnb3J5QW5kQnJhbmRcQnJhbmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Components/ViewCategoryAndBrand/Default.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Components/ViewCategoryAndBrand/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmlld0NhdGVnb3J5QW5kQnJhbmRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/Error.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/_LoginPartial.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/_StatusMessage.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdGF0dXNNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/_ViewImports.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/_ViewStart.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectDATN/ProjectDATN.Web/Areas/Admin/Views/Shared/_Layout.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-y5k0ecdn39
 
-[D:/ProjectDATN/ProjectDATN.Web/Views/Shared/_Layout.cshtml]
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-go02jk3xer

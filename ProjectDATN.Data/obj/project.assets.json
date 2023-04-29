@@ -2730,11 +2730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectDATN\\ProjectDATN.Data\\ProjectDATN.Data.csproj",
+      "projectUniqueName": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Data\\ProjectDATN.Data.csproj",
       "projectName": "ProjectDATN.Data",
-      "projectPath": "D:\\ProjectDATN\\ProjectDATN.Data\\ProjectDATN.Data.csproj",
+      "projectPath": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Data\\ProjectDATN.Data.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectDATN\\ProjectDATN.Data\\obj\\",
+      "outputPath": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

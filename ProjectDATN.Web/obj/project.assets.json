@@ -11068,11 +11068,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectDATN\\ProjectDATN.Web\\ProjectDATN.Web.csproj",
+      "projectUniqueName": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\ProjectDATN.Web.csproj",
       "projectName": "ProjectDATN.Web",
-      "projectPath": "D:\\ProjectDATN\\ProjectDATN.Web\\ProjectDATN.Web.csproj",
+      "projectPath": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\ProjectDATN.Web.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectDATN\\ProjectDATN.Web\\obj\\",
+      "outputPath": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11089,8 +11089,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\ProjectDATN\\ProjectDATN.Data\\ProjectDATN.Data.csproj": {
-              "projectPath": "D:\\ProjectDATN\\ProjectDATN.Data\\ProjectDATN.Data.csproj"
+            "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Data\\ProjectDATN.Data.csproj": {
+              "projectPath": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Data\\ProjectDATN.Data.csproj"
             }
           }
         }

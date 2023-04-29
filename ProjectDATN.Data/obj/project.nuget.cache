@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DJYpJwkj5AoibEnqTD+M8aF837BPQhZLhjTqyJl6YZt+jDpHX2kSfV1bZTO3uB/6Jb/35bt8wTjJ7Sw+ZVx1hA==",
+  "dgSpecHash": "dP/JxYgglp1mfNjcUONkYoEolFjbjUg3Xh2X2zG7xx3f0EX9RQSYXf8G+/WmB5DNBd4iQeZlb7xJtx/SaQsQYg==",
   "success": true,
-  "projectFilePath": "D:\\ProjectDATN\\ProjectDATN.Data\\ProjectDATN.Data.csproj",
+  "projectFilePath": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Data\\ProjectDATN.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\mailkit\\3.6.0\\mailkit.3.6.0.nupkg.sha512",
