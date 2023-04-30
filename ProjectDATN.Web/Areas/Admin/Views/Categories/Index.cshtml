@@ -12,11 +12,12 @@
 }
 <h3>Danh sách danh mục</h3>
 <div class="col-4 p-0 justify-content-end">
-    <form asp-action="Index" asp-controller="Categories">
-        <span class="btn-group">
-            <input class="form-control" type="text" name="SearchText" placeholder="Tìm kiếm" />
-            <input class="p-1 m-lg-2 btn btn-sm btn-info" type="submit" value="Search" />
-        </span>
+    <form asp-action="Index" asp-controller="Categories" asp-area="Admin">
+        <div class="input-group mb-3">
+            <input type="text" name="search" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i>Tìm kiếm</button>
+        </div>
+
     </form>
 </div>
 <div style="text-align:right; width:100%">

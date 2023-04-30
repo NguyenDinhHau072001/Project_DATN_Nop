@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjectDATN.Data.EF;
 using ProjectDATN.Data.Entities;
 using X.PagedList;
@@ -15,14 +16,23 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult Index(int? page)
+		public IActionResult Index(int? page, string search="")
 		{
-			var listOfCategories = _db.Categories.ToList();
+			List<Category> categories;
+			if (search != "" && search != null)
+			{
+				categories = _db.Categories.Where(c => c.CateName.Contains(search)).ToList();
+			}
+			else
+			{
+				categories = _db.Categories.ToList();
+			}
+			
 
 			int pageSize = 5;
 			int pageNumber = (page ?? 1);
 
-			return View(listOfCategories.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
+			return View(categories.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
 		}
 
 		public IActionResult Create()

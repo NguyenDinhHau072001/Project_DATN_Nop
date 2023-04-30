@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Internal;
 using ProjectDATN.Data.EF;
 using ProjectDATN.Data.ViewModels;
 
@@ -17,6 +18,31 @@ namespace ProjectDATN.Web.ViewComponents
 			if(name=="NewProducts")
 			{
 				var products = _db.Products.OrderByDescending(x => x.Id).Take(30).ToList();
+
+				//var products = _db.Products.LeftJoin(_db.Promotions.DefaultIfEmpty(), p => p.Id, pr => pr.ProId, (p, pr) => new
+				//{
+				//	p.Id,
+				//	p.ProName,
+				//	p.Image,
+				//	p.Price,
+				//	p.PerchasePrice,
+				//	p.CateID,
+				//	pr.Promo,
+				//}).OrderByDescending(p=>p.Id).Take(30).ToList();
+
+				//var products = from p in _db.Products
+				//			   join pr in _db.Promotions
+				//				on p.Id equals pr.ProId into pp
+				//			   select new
+				//			   {
+				//				   p.Id,
+				//				   p.ProName,
+				//				   p.Image,
+				//				   p.Price,
+				//				   p.PerchasePrice,
+				//				   p.CateID,
+
+				//			   };
 				var listProduct = new List<ProductVM>();
 				foreach (var product in products)
 				{
@@ -27,7 +53,8 @@ namespace ProjectDATN.Web.ViewComponents
 						Image = product.Image,
 						Price = product.Price,
 						CateName = _db.Categories.FirstOrDefault(x => x.Id == product.CateID).CateName,
-						PerchasePrice = product.Price
+						//Promotion = product.Promo,
+						PerchasePrice = product.PerchasePrice
 
 					};
 					listProduct.Add(vm);
@@ -48,7 +75,7 @@ namespace ProjectDATN.Web.ViewComponents
                         Image = product.Image,
                         Price = product.Price,
                         CateName = _db.Categories.FirstOrDefault(x => x.Id == product.CateID).CateName,
-                        PerchasePrice = product.Price
+                        PerchasePrice = product.PerchasePrice
 
                     };
                     listSaleProduct.Add(vm);

@@ -1,0 +1,41 @@
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@using X.PagedList;
+@model IPagedList<ProjectDATN.Data.Entities.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <tr class="row">
+        <th class="col-md-2">Họ tên người dùng</th>
+        <th class="col-md-2">Số điện thoại</th>
+        <th class="col-md-2">Email</th>
+        <th class="col-md-5">Nội dung</th>
+        <th></th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr class="row">
+            <td class="col-md-2">@item.Name</td>
+            <td class="col-md-2">@item.PhoneNumber</td>
+            <td class="col-md-2">@item.Email</td>
+            <td class="col-md-4">@item.Message</td>
+            <td class="col-md-2" style="text-align:center">
+                <a href=""><i class="fas fa-book-reader" style="font-size:25px"></i></a>
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="float-right">
+    @* Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount*@
+    @Html.PagedListPager( Model , page=> Url.Action("Index",new{page}),
+    new PagedListRenderOptions{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+    })
+</div>
+
+

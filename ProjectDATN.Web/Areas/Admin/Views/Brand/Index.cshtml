@@ -13,13 +13,16 @@
 }
 <h3>Danh sách thương hiệu sản phẩm</h3>
 <div class="col-4 p-0 justify-content-end">
+
     <form asp-action="Index" asp-controller="Brand" asp-area="Admin">
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i>Tìm kiếm</button>
+            <input type="text" name="search" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i>Tìm kiếm</button>
         </div>
 
     </form>
+
+
 </div>
 <div style="text-align:right; width:100%">
     <a class="btn btn-primary" asp-area="Admin" asp-action="Create" asp-controller="Brand"><i class="bi bi-plus-circle"></i> Thêm mới</a>

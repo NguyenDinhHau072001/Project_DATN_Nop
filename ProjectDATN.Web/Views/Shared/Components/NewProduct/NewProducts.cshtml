@@ -9,12 +9,33 @@
         <div class="product">
             <div class="product-img">
                 <img src="~/uploads/images/product/@item.Image" alt="" style="height:250px">
-               
+                <div class="product-label">
+                    <span class="new">NEW</span>
+                </div>
+               @* @if (@item.Promotion == ProjectDATN.Data.Enums.KM.Percent75)
+                {
+                    <div class="product-label">
+                        <span class="sale">-30%</span>
+                    </div>
+                }
+                else if(item.Promotion == ProjectDATN.Data.Enums.KM.Persent50)
+                {
+                    <div class="product-label">
+                        <span class="sale">-50%</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="product-label">
+                        
+                    </div>
+                }*@
+
             </div>
             <div class="product-body">
                 <p class="product-category">Category</p>
                 <h3 class="product-name"><a asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">@item.ProName</a></h3>
-                <h4 class="product-price">@item.PerchasePrice <del class="product-old-price">@item.Price</del></h4>
+                <h4 class="product-price">@item.PerchasePrice.ToString("#,##0") VND </h4>
                 <div class="product-rating">
                     @*<i class="fa fa-star"></i>
             <i class="fa fa-star"></i>

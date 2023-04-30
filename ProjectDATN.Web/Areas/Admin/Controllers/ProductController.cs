@@ -24,10 +24,19 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
 			_userManager = userManager;
 		}
 
-		public IActionResult Index(int? page)
+		public IActionResult Index(int? page, string search)
 		{
 			var listProducts = new List<ProductVM>();
-			var products = _db.Products.OrderByDescending(x => x.Id).ToList();
+			var products = new List<Product>();
+			if(search != null && search != "")
+			{
+				products = _db.Products.Where(x=>x.ProName.Contains(search)).OrderByDescending(x=>x.Id).ToList();
+			}
+			else
+			{
+                products = _db.Products.OrderByDescending(x => x.Id).ToList();
+            }
+			
 			foreach (var item in products)
 			{
 				ProductVM vm = new()

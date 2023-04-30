@@ -1,4 +1,5 @@
 ﻿using ProjectDATN.Data.Entities;
+using ProjectDATN.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,6 +26,7 @@ namespace ProjectDATN.Data.ViewModels
 
         public int BandID { get; set; }
         public string? BrandName { get; set; }
+        public KM Promotion { get; set; }
 
         public List<OrderDetail>? OrderDetails { get; set; }
 

@@ -12,3 +12,17 @@ D:\ProjectDATN\ProjectDATN.Data\obj\Debug\net6.0\refint\ProjectDATN.Data.dll
 D:\ProjectDATN\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.pdb
 D:\ProjectDATN\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.genruntimeconfig.cache
 D:\ProjectDATN\ProjectDATN.Data\obj\Debug\net6.0\ref\ProjectDATN.Data.dll
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\bin\Debug\net6.0\ProjectDATN.Data.deps.json
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\bin\Debug\net6.0\ProjectDATN.Data.runtimeconfig.json
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\bin\Debug\net6.0\ProjectDATN.Data.dll
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\bin\Debug\net6.0\ProjectDATN.Data.pdb
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.csproj.AssemblyReference.cache
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.AssemblyInfoInputs.cache
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.AssemblyInfo.cs
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.csproj.CoreCompileInputs.cache
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.dll
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\refint\ProjectDATN.Data.dll
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.pdb
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ProjectDATN.Data.genruntimeconfig.cache
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Data\obj\Debug\net6.0\ref\ProjectDATN.Data.dll

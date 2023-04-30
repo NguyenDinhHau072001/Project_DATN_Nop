@@ -249,7 +249,7 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 			// Generate the token and send it
 			var user = await GetCurrentUserAsync();
 			var code = await _userManager.GenerateChangePhoneNumberTokenAsync(user, model.PhoneNumber);
-			// await _emailSender.SendSmsAsync(model.PhoneNumber, "Mã xác thực là: " + code);
+			await _emailSender.SendSmsAsync(model.PhoneNumber, "Mã xác thực là: " + code);
 			return RedirectToAction(nameof(VerifyPhoneNumber), new { PhoneNumber = model.PhoneNumber });
 		}
 

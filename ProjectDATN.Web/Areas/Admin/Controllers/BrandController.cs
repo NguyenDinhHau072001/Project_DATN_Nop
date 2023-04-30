@@ -5,70 +5,79 @@ using X.PagedList;
 
 namespace ProjectDATN.Web.Areas.Admin.Controllers
 {
-	[Area("Admin")]
-	public class BrandController : Controller
-	{
-		private readonly ApplicationDBContext _db;
+    [Area("Admin")]
+    public class BrandController : Controller
+    {
+        private readonly ApplicationDBContext _db;
 
-		public BrandController(ApplicationDBContext db)
-		{
-			_db = db;
-		}
+        public BrandController(ApplicationDBContext db)
+        {
+            _db = db;
+        }
 
-		public IActionResult Index(int? page)
-		{
-			var listOfCategories = _db.Brands.ToList();
+        public IActionResult Index(int? page, string search = "")
+        {
+            var listOfCategories = new List<Brand>();
+            if (search != "" && search != null)
+            {
+                listOfCategories = _db.Brands.Where(x => x.Name.Equals(search)).ToList();
+            }
+            else
+            {
+                listOfCategories = _db.Brands.ToList();
+            }
 
-			int pageSize = 5;
-			int pageNumber = (page ?? 1);
 
-			return View(listOfCategories.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
-		}
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
 
-		public IActionResult Create()
-		{
-			return View();
-		}
+            return View(listOfCategories.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
+        }
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult Create(Brand a)
-		{
-			if (ModelState.IsValid)
-			{
-				_db.Brands.Add(a);
-				_db.SaveChanges();
+        public IActionResult Create()
+        {
+            return View();
+        }
 
-				return RedirectToAction("Index");
-			}
-			return View(_db.Brands);
-		}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Brand a)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Brands.Add(a);
+                _db.SaveChanges();
 
-		[HttpGet]
-		public IActionResult Edit(int id)
-		{
-			if (id == 0 || id == null)
-				return NotFound();
-			var brandID = _db.Brands.FirstOrDefault(u => u.Id == id);
-			if (brandID == null)
-				return NotFound();
-			return View(brandID);
-		}
+                return RedirectToAction("Index");
+            }
+            return View(_db.Brands);
+        }
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult Edit(Brand a)
-		{
-			if (ModelState.IsValid)
-			{
-				_db.Brands.Update(a);
-				_db.SaveChanges();
-				return RedirectToAction("Index");
-			}
-			return View(a);
-		}
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            if (id == 0 || id == null)
+                return NotFound();
+            var brandID = _db.Brands.FirstOrDefault(u => u.Id == id);
+            if (brandID == null)
+                return NotFound();
+            return View(brandID);
+        }
 
-		/*public IActionResult Delete(int? id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Brand a)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Brands.Update(a);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(a);
+        }
+
+        /*public IActionResult Delete(int? id)
         {
             if (id == 0 || id == null)
                 return NotFound();
@@ -78,22 +87,22 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
             return View(categoryID);
         }*/
 
-		public IActionResult Delete(int? id)
-		{
-			if (id == 0 || id == null)
-				return NotFound();
-			var brand = _db.Brands.FirstOrDefault(u => u.Id == id);
-			if (brand == null)
-				return NotFound();
-			return PartialView("DeleteCategory", brand);
-		}
+        public IActionResult Delete(int? id)
+        {
+            if (id == 0 || id == null)
+                return NotFound();
+            var brand = _db.Brands.FirstOrDefault(u => u.Id == id);
+            if (brand == null)
+                return NotFound();
+            return PartialView("DeleteCategory", brand);
+        }
 
-		[HttpPost]
-		public IActionResult Delete(Brand a)
-		{
-			_db.Brands.Remove(a);
-			_db.SaveChanges();
-			return RedirectToAction("Index");
-		}
-	}
+        [HttpPost]
+        public IActionResult Delete(Brand a)
+        {
+            _db.Brands.Remove(a);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+    }
 }

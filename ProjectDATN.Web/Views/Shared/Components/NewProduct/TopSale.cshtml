@@ -11,13 +11,12 @@
                 <img src="~/uploads/images/product/@item.Image" alt="" style="height:250px">
                 <div class="product-label">
                     <span class="sale">-30%</span>
-                    <span class="new">NEW</span>
                 </div>
             </div>
             <div class="product-body">
                 <p class="product-category">@item.CateName</p>
                 <h3 class="product-name"><a href="#">@item.ProName</a></h3>
-                <h4 class="product-price">@item.PerchasePrice <del class="product-old-price">@item.Price</del></h4>
+                <h4 class="product-price">@item.PerchasePrice.ToString("#,##0") VND </h4>
                 
                 <div class="product-btns">
                    

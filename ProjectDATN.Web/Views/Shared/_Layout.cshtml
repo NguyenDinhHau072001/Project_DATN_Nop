@@ -66,8 +66,8 @@
                     <!-- LOGO -->
                     <div class="col-md-3">
                         <div class="header-logo">
-                            <a href="#" class="logo">
-                                <img src="./img/logo.png" alt="">
+                            <a asp-action="Index" asp-controller="Home" asp-area="" class="logo">
+                                <h1 style="color:white;line-height:60px"><span style="color:aqua"><i class="fa-solid fa-display"></i></span><span style="color:yellowgreen">NDH</span>Shop</h1>
                             </a>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                                     <option value="1">Category 01</option>
                                     <option value="1">Category 02</option>
                                 </select>*@
-                                <input class="input" placeholder="Search here">
+                                <input class="input" asp-action="Index" asp-controller="Product" asp-area="" name="search" placeholder="Tìm kiếm">
                                 <button class="search-btn">Search</button>
                             </form>
                         </div>
@@ -101,10 +101,10 @@
                             <!-- /Wishlist -->
                             <!-- Cart -->
                             <div>
-                                <a href="/cart/index" >
+                                <a href="/cart/index" style="line-height:60px" >
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Your Cart</span>
-                                    <div class="qty" style="translate:-60px">
+                                    <div class="qty" style="translate:-60px;margin-top:15px">
                                         @{
                                             var data = Context.Session.Get<List<CartItem>>("GioHang");
                                             if(data == null)
@@ -151,7 +151,7 @@
                     <li><a asp-action="Index" asp-controller="Promotion" asp-area="">Khuyến mại</a></li>
                     <li><a>Tin tức</a></li>
 
-                    <li class=""><a>Liên hệ</a></li>
+                    <li class=""><a asp-action="Contact" asp-controller="Contact" asp-area="">Liên hệ</a></li>
                     <li></li>
                 </ul>
                 <!-- /NAV -->

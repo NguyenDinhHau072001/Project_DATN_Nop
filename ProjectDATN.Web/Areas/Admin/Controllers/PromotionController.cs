@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using ProjectDATN.Data.EF;
 using ProjectDATN.Data.Entities;
 using ProjectDATN.Data.ViewModels;
+using System.Collections.Generic;
 using X.PagedList;
 
 namespace ProjectDATN.Web.Areas.Admin.Controllers
@@ -19,23 +20,60 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
 			_environment = environment;
 		}
 
-		public IActionResult Index(int? page)
+		public IActionResult Index(int? page, string search)
 		{
-			var listOfPromotions = new List<PrmotionVM>();
-			_db.Promotions.OrderByDescending(x => x.Id).ToList().ForEach(promotion =>
+           
+           
+           
+            var listOfPromotions = new List<PrmotionVM>();
+			List<Product> productIDs;
+
+            if (search != null && search != "")
 			{
-				listOfPromotions.Add(new PrmotionVM
-				(
-					 promotion.Id,
-					 promotion.ProId,
-						proName: _db.Products.Find(promotion.ProId).ProName,
-						proImage: _db.Products.Find(promotion.ProId).Image,
-						
-					 promotion.Promo,
-					 promotion.Created,
-					 promotion.Finish
-				));
-			});
+                productIDs = _db.Products.Where(p => p.ProName.Contains(search)).ToList();
+            }
+			else
+			{
+				productIDs = null;
+			}
+			if(productIDs != null)
+			{
+                foreach (var item in productIDs)
+                {
+                    _db.Promotions.Where(x=>x.ProId == item.Id).ToList().ForEach(promotion =>
+                    {
+                        listOfPromotions.Add(new PrmotionVM
+                        (
+                             promotion.Id,
+                             promotion.ProId,
+                                proName: _db.Products.Find(promotion.ProId).ProName,
+                                proImage: _db.Products.Find(promotion.ProId).Image,
+
+                             promotion.Promo,
+                             promotion.Created,
+                             promotion.Finish
+                        ));
+                    });
+                }
+            }
+			else
+			{
+                _db.Promotions.OrderByDescending(x => x.Id).ToList().ForEach(promotion =>
+                {
+                    listOfPromotions.Add(new PrmotionVM
+                    (
+                         promotion.Id,
+                         promotion.ProId,
+                            proName: _db.Products.Find(promotion.ProId).ProName,
+                            proImage: _db.Products.Find(promotion.ProId).Image,
+
+                         promotion.Promo,
+                         promotion.Created,
+                         promotion.Finish
+                    ));
+                });
+            }
+			
 			int pageSize = 5;
 			int pageNumber = (page ?? 1);
 
