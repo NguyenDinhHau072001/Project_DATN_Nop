@@ -17,8 +17,6 @@
                     <div id="reload">
                         @await Html.PartialAsync("Partial_View_Cart")
                     </div>
-                    
-                    <div class="accent-danger"><a asp-action="DeleteAll" asp-controller="Cart" asp-area="">Xóa tất cả</a></div>
                     <div class="back-to-shop"><a asp-action="Index" asp-controller="Home" style="font-size:18px">&leftarrow; <span class="text-muted">Tiếp tục mua hàng</span></a></div>
                 </div>
 
@@ -55,7 +53,17 @@
                     </tr>
                 </table>
                 <div class="col-md-4 summary">
-                    <button class="btn">Thanh Toán</button>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="btn btn-sm btn-danger" asp-action="Index" asp-controller="CheckOut" asp-area=""> Thanh Toán</a>
+                    }
+                    else
+                    {
+                        <a asp-action="Login" asp-controller="Account" asp-area="Identity" class="btn btn-sm btn-danger">
+                            Thanh Toán
+                        </a>
+                    }
+
                 </div>
             </div>
 

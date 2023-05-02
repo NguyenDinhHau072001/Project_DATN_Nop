@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ProjectDATN.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\css\\Checkout.css",
+      "PackagePath": "staticwebassets\\Front\\css\\Checkout.css"
+    },
+    {
       "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Front\\css\\bootstrap.min.css"
     },
@@ -123,6 +127,10 @@
     {
       "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\img\\shop03.png",
       "PackagePath": "staticwebassets\\Front\\img\\shop03.png"
+    },
+    {
+      "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\img\\vnpay.jpg",
+      "PackagePath": "staticwebassets\\Front\\img\\vnpay.jpg"
     },
     {
       "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\js\\bootstrap.min.js",

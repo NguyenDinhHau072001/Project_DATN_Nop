@@ -12,15 +12,16 @@ namespace ProjectDATN.Data.Entities
     {
         [Key]
         public int Id { set; get; }
-        public DateTime OrderDate { set; get; }
-        public Guid UserId { set; get; }
-        public string ShipName { set; get; }
-        public string ShipAddress { set; get; }
-        public string ShipEmail { set; get; }
-        public string ShipPhoneNumber { set; get; }
+        public DateTime OrderDate { set; get; } = DateTime.Now;
+        public string UserId { set; get; }
+        public string? UserName { set; get; }
+        public string Address { set; get; }
+        public string PhoneNumber { set; get; }
+        public decimal TotalPrice { set; get; }
+        public PaymentStatus Payment {  set; get; }
+        public bool IsPay { get; set; } = false;
         public OrderStatus Status { set; get; }
-
-        public List<OrderDetail> OrderDetails { get; set; }
+        public List<OrderDetail>? OrderDetails { get; set; }
         public AppUser AppUser { get; set; }
     }
 }

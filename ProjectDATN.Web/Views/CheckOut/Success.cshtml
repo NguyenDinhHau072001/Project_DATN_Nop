@@ -1,0 +1,30 @@
+﻿@using ProjectDATN.Web.ViewComponents;
+@model ProjectDATN.Data.ViewModels.MuahangSuccessVM 
+@{
+    ViewData["Title"] = "Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Đơn hàng bạn vừa đặt</h1>
+<div class="form-group">
+    <table class="table">
+        <tr>
+            <th>Họ và tên</th>
+            <th>Mã đơn hàng</th>
+            <th>Địa chỉ</th>
+            <th>Số điện thoại</th>
+        
+            <tr>
+                <td>@Model.UserName</td>
+                <td>@Model.OrderID</td>
+                <td>@Model.Address</td>
+                <td>@Model.PhoneNumber</td>
+            </tr>
+        
+    </table>
+
+</div>
+<div class="form-group">
+    @await Component.InvokeAsync(typeof(ProductInCartViewComponent),new {name="Cart"})
+</div>
+

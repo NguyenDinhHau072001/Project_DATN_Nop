@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ur51OhBN3+lEdZ3CPiCz/9SRNr+1q6vinfXSJPywqDo=",
+  "Hash": "1LWKXp5JioJXUs3nQYR3lMfEsYRy8YubBrhB9Qlr5nw=",
   "Source": "ProjectDATN.Web",
   "BasePath": "_content/ProjectDATN.Web",
   "Mode": "Default",
@@ -35972,6 +35972,23 @@
       "OriginalItemSpec": "wwwroot\\Front\\css\\bootstrap.min.css"
     },
     {
+      "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\css\\Checkout.css",
+      "SourceId": "ProjectDATN.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\",
+      "BasePath": "_content/ProjectDATN.Web",
+      "RelativePath": "Front/css/Checkout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Front\\css\\Checkout.css"
+    },
+    {
       "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\css\\font-awesome.min.css",
       "SourceId": "ProjectDATN.Web",
       "SourceType": "Discovered",
@@ -36463,6 +36480,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Front\\img\\shop03.png"
+    },
+    {
+      "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\img\\vnpay.jpg",
+      "SourceId": "ProjectDATN.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\",
+      "BasePath": "_content/ProjectDATN.Web",
+      "RelativePath": "Front/img/vnpay.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Front\\img\\vnpay.jpg"
     },
     {
       "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\Front\\js\\bootstrap.min.js",

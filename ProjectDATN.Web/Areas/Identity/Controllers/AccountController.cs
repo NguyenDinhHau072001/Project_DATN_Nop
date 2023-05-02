@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
+using ProjectDATN.Data.EF;
 using ProjectDATN.Data.Entities;
 using ProjectDATN.Web.Areas.Identity.Models.Account;
 using ProjectDATN.Web.ExtendMethod;
@@ -24,17 +25,21 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 		private readonly SignInManager<AppUser> _signInManager;
 		private readonly IEmailSender _emailSender;
 		private readonly ILogger<AccountController> _logger;
+		private readonly ApplicationDBContext _db;
 
 		public AccountController(
 			UserManager<AppUser> userManager,
 			SignInManager<AppUser> signInManager,
 			IEmailSender emailSender,
-			ILogger<AccountController> logger)
+			ILogger<AccountController> logger,
+			ApplicationDBContext db
+			)
 		{
 			_userManager = userManager;
 			_signInManager = signInManager;
 			_emailSender = emailSender;
 			_logger = logger;
+			_db = db;
 		}
 
 		[HttpGet("/login/")]
@@ -55,6 +60,8 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 			////if (ModelState.IsValid)
 			//{
 			var result = await _signInManager.PasswordSignInAsync(model.UserNameOrEmail, model.Password, model.RememberMe, lockoutOnFailure: true);
+			var usermodel = _db.Users.Where(x => x.Email.Equals(model.UserNameOrEmail) || x.UserName.Equals(model.UserNameOrEmail)).FirstOrDefault();
+			//var usermodel = await _userManager.FindByEmailAsync(model.UserNameOrEmail);
 			// Tìm UserName theo Email, đăng nhập lại
 			if ((!result.Succeeded) && AppUtilities.IsValidEmail(model.UserNameOrEmail))
 			{
@@ -68,7 +75,9 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 			if (result.Succeeded)
 			{
 				_logger.LogInformation(1, "User logged in.");
-				return LocalRedirect(returnUrl);
+                HttpContext.Session.SetString("Id",usermodel.Id.ToString());
+                var taikhoanId = HttpContext.Session.GetString("Id");
+                return LocalRedirect(returnUrl);
 			}
 			if (result.RequiresTwoFactor)
 			{
