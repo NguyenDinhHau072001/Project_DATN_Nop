@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1LWKXp5JioJXUs3nQYR3lMfEsYRy8YubBrhB9Qlr5nw=",
+  "Hash": "0+GK5kUBTZ6+eW44GPCpTtaGStVhviWKw/APwojC5C0=",
   "Source": "ProjectDATN.Web",
   "BasePath": "_content/ProjectDATN.Web",
   "Mode": "Default",
@@ -38911,6 +38911,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\product\\f844cd91-565f-46ed-8d9d-2a44e7e55913_ss4.jpg"
+    },
+    {
+      "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\f874d334-cae2-4c54-a78b-2f0b500c6e53_m8.jpg",
+      "SourceId": "ProjectDATN.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\",
+      "BasePath": "_content/ProjectDATN.Web",
+      "RelativePath": "uploads/images/product/f874d334-cae2-4c54-a78b-2f0b500c6e53_m8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\product\\f874d334-cae2-4c54-a78b-2f0b500c6e53_m8.jpg"
     },
     {
       "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\f99b3b0b-5a88-4e7e-b9fe-d588033e0214_iphone11.jpg",

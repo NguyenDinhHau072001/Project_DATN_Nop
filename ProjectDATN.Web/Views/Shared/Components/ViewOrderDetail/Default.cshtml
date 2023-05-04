@@ -1,9 +1,27 @@
-﻿@model IEnumerable<ProjectDATN.Data.Entities.OrderDetail>
+﻿@model IEnumerable<ProjectDATN.Data.ViewModels.OrderDetailVM>
 @{
 
 }
 <table class="table">
     <tr>
         <th></th>
+        <th>Mã đặt hàng</th>
+        <th>Ảnh</th>
+        <th>Tên sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Giá</th>
+        <th>Ngày đặt hàng</th>
     </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.OrderId</td>
+            <td><img src="~/uploads/images/product/@item.Image" style="width:200px" /></td>
+            <td>@item.ProductName</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price.ToString("#,##0") VND</td>
+            <td>@item.CreatedDate</td>
+        </tr>
+    }
 </table>

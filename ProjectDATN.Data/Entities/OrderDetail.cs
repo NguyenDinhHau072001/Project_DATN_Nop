@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace ProjectDATN.Data.Entities
         public int ProductId { set; get; }
         public int Quantity { set; get; }
         public decimal Price { set; get; }
+        [BindProperty, DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime CreatedDate { set; get; }
 
         public Order? Order { get; set; }

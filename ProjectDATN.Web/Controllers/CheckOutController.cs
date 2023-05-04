@@ -78,36 +78,49 @@ namespace ProjectDATN.Web.Controllers
             {
                 //if (ModelState.IsValid)
                 //{
-                    Order donhang = new Order();
-                    donhang.UserId = vm.UserId;
-                    donhang.UserName = _db.Users.FirstOrDefault(x => x.Id == vm.UserId).UserName;
-                    donhang.Address = vm.Tinh + " - " + vm.Huyen + " - " + vm.PhuongXa + " - " + vm.Address;
-                    
-                    donhang.PhoneNumber = vm.PhoneNumber;
-                    donhang.TotalPrice = Convert.ToDecimal(cart.Sum(x => x.PriceTotal));
-                    donhang.Payment = vm.Payment;
-                    donhang.IsPay = false;
-                   
-                    
-                    donhang.Status = 0;
-                    _db.Add(donhang);
-                    _db.SaveChanges();
 
-                    foreach (var item in cart)
-                    {
-                        OrderDetail orderDetail = new OrderDetail();
-                        orderDetail.OrderId = donhang.Id;
-                        orderDetail.ProductId = item.ProductId;
-                        orderDetail.Quantity = item.Quantity;
-                        orderDetail.Price = donhang.TotalPrice;
-                        orderDetail.CreatedDate = DateTime.Now;
-                        _db.Add(orderDetail);
-                    }
-                    _db.SaveChanges();
 
-                    HttpContext.Session.Remove("GioHang");
-                    _notyfService.Success("Đơn hàng đã đặt thành công");
-                    return RedirectToAction("Success");
+
+                Order donhang = new Order();
+                donhang.UserId = vm.UserId;
+                donhang.UserName = _db.Users.FirstOrDefault(x => x.Id == vm.UserId)?.UserName;
+                donhang.Address = vm.Tinh + " - " + vm.Huyen + " - " + vm.PhuongXa + " - " + vm.Address;
+                donhang.PhoneNumber = vm.PhoneNumber;
+                donhang.TotalPrice = Convert.ToDecimal(cart.Sum(x => x.PriceTotal));
+                donhang.Payment = vm.Payment;
+                donhang.IsPay = false;
+
+
+                donhang.Status = 0;
+                _db.Add(donhang);
+                _db.SaveChanges();
+
+                foreach (var item in cart)
+                {
+                    OrderDetail orderDetail = new OrderDetail();
+                    orderDetail.OrderId = donhang.Id;
+                    orderDetail.ProductId = item.ProductId;
+                    orderDetail.Quantity = item.Quantity;
+                    orderDetail.Price = item.Price;
+                    orderDetail.CreatedDate = DateTime.Now;
+                    _db.Add(orderDetail);
+                }
+                _db.SaveChanges();
+
+
+                foreach(var item in cart)
+                {
+                    var product = _db.Products.FirstOrDefault(x=>x.Id == item.ProductId);
+                    product.Quality = product.Quality - item.Quantity;
+                    product.SaleQuatity = product.SaleQuatity + item.Quantity;
+                    _db.Update(product);
+                }
+                _db.SaveChanges();
+                HttpContext.Session.SetString("OrderId", donhang.Id.ToString());
+                var oderID = HttpContext.Session.GetString("OderId");
+                HttpContext.Session.Remove("GioHang");
+                _notyfService.Success("Đơn hàng đã đặt thành công");
+                return RedirectToAction("Success");
                 //}
             }
             catch (Exception ex)
@@ -138,6 +151,7 @@ namespace ProjectDATN.Web.Controllers
                 successVM.OrderID = donhang.Id;
                 successVM.Address = donhang.Address;
                 successVM.PhoneNumber = khachhang.PhoneNumber;
+                successVM.OrderStatus = _db.Orders.FirstOrDefault(x => x.Id == successVM.OrderID)?.Status;
                 return View(successVM);
             }
             catch

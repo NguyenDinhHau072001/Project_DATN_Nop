@@ -18,7 +18,7 @@ namespace ProjectDATN.Data.Entities
         public Guid UserId { get; set; }
 
         public Product Product { get; set; }
-
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DateCreated { get; set; }
         public AppUser AppUser { get; set; }
     }

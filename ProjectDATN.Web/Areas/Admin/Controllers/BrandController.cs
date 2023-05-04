@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using ProjectDATN.Data.EF;
 using ProjectDATN.Data.Entities;
 using X.PagedList;
@@ -9,10 +10,12 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
     public class BrandController : Controller
     {
         private readonly ApplicationDBContext _db;
+        private readonly UserManager<AppUser> _userManager;
 
-        public BrandController(ApplicationDBContext db)
+        public BrandController(ApplicationDBContext db, UserManager<AppUser> userManager)
         {
             _db = db;
+            _userManager = userManager;
         }
 
         public IActionResult Index(int? page, string search = "")

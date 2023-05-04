@@ -42,7 +42,70 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 			_db = db;
 		}
 
-		[HttpGet("/login/")]
+
+        [HttpGet("/admin/login/")]
+        [AllowAnonymous]
+        public IActionResult LoginAdmin(string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            return View("~/Areas/Admin/Views/Account/LoginAdmin.cshtml");
+        }
+
+        [HttpPost("/admin/login/")]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LoginAdmin(LoginViewModel model, string returnUrl = null)
+        {
+            returnUrl ??= Url.Content("~/");
+            ViewData["ReturnUrl"] = returnUrl;
+            ////if (ModelState.IsValid)
+            //{
+            var result = await _signInManager.PasswordSignInAsync(model.UserNameOrEmail, model.Password, model.RememberMe, lockoutOnFailure: true);
+            var usermodel = _db.Users.Where(x => x.Email.Equals(model.UserNameOrEmail) || x.UserName.Equals(model.UserNameOrEmail)).FirstOrDefault();
+            //var usermodel = await _userManager.FindByEmailAsync(model.UserNameOrEmail);
+            // Tìm UserName theo Email, đăng nhập lại
+            if ((!result.Succeeded) && AppUtilities.IsValidEmail(model.UserNameOrEmail))
+            {
+                var user = await _userManager.FindByEmailAsync(model.UserNameOrEmail);
+                if (user != null)
+                {
+                    result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, lockoutOnFailure: true);
+                }
+            }
+
+			// no deo vao duoc home admin
+
+
+            if (result.Succeeded)
+            {
+                _logger.LogInformation(1, "User logged in.");
+                HttpContext.Session.SetString("Id", usermodel.Id.ToString());
+                var taikhoanId = HttpContext.Session.GetString("Id");
+				//return LocalRedirect(returnUrl);
+				return View("~/Areas/Admin/Views/Home/Index.cshtml");
+            }
+            if (result.RequiresTwoFactor)
+            {
+                return RedirectToAction(nameof(SendCode), new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+            }
+
+            if (result.IsLockedOut)
+            {
+                _logger.LogWarning(2, "Tài khoản bị khóa");
+                return View("Lockout");
+            }
+            else
+            {
+                ModelState.AddModelError("Không đăng nhập được.");
+                return View(model);
+            }
+            //}
+            //return View(model);
+        }
+
+        //-----------------------------------
+
+        [HttpGet("/login/")]
 		[AllowAnonymous]
 		public IActionResult Login(string returnUrl = null)
 		{
@@ -678,5 +741,8 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 		{
 			return View();
 		}
+
+
+		
 	}
 }

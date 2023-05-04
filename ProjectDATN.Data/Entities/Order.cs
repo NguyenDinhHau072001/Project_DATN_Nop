@@ -1,4 +1,5 @@
-﻿using ProjectDATN.Data.Enums;
+﻿using Microsoft.AspNetCore.Mvc;
+using ProjectDATN.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,6 +13,7 @@ namespace ProjectDATN.Data.Entities
     {
         [Key]
         public int Id { set; get; }
+        [BindProperty, DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime OrderDate { set; get; } = DateTime.Now;
         public string UserId { set; get; }
         public string? UserName { set; get; }

@@ -1,0 +1,71 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+@model IPagedList<ProjectDATN.Data.Entities.Order>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int intSno = 0;
+}
+<h3>Danh sách đơn hàng</h3>
+<div class="col-4 p-0 justify-content-end">
+    <form asp-action="Index" asp-controller="Order" asp-area="Admin">
+        <div class="input-group mb-3">
+            <input type="text" name="search" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i>Tìm kiếm</button>
+        </div>
+
+    </form>
+</div>
+
+<table class="table table-bordered table-striped" width="100%">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên khách hàng</th>
+            <th>Số điện thoại</th>
+            <th>Tổng tiền</th>
+            <th>Thanh toán</th>
+            <th>Trạng thái</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.TotalPrice</td>
+                @if (item.Status == ProjectDATN.Data.Enums.OrderStatus.Success || item.Payment == ProjectDATN.Data.Enums.PaymentStatus.vnpay)
+                {
+                    <td style="color: blue">Đã thanh toán</td>
+                }
+                else
+                {
+                    <td style="color: #e35a00">Chưa thanh toán</td>
+                }
+                <td>@item.Status</td>
+                <td>
+                    <a asp-area="Admin" class="btn btn-primary mx-2" asp-action="Detail" asp-route-id="@item.Id" asp-controller="Order"><i class="bi bi-pencil-square"></i> Xem chi tiết</a>
+                  
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="float-right">
+    @* Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount*@
+    @Html.PagedListPager(Model, page=> Url.Action("Index",new{page}),
+    new PagedListRenderOptions{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+    })
+</div>
+
+

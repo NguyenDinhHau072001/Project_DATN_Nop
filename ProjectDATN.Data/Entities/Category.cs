@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Mvc;
 using ProjectDATN.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,9 @@ namespace ProjectDATN.Data.Entities
         [Key]
         public int Id { set; get; }
         public string CateName { set; get; }
+        [BindProperty, DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Created { set; get; } = DateTime.Now;
+        [BindProperty, DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ModifiedDate { get; set; } = DateTime.Now;
         public string? Slug { set; get; }
 

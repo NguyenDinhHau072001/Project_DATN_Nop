@@ -1,0 +1,13 @@
+﻿@model ProjectDATN.Data.Entities.Post
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<input type="hidden" asp-for="Id" />
+<h1>@Model.Name</h1>
+
+<pre>
+    @Html.Raw(Model.Content)
+</pre>
+

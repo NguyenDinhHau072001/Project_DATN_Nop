@@ -25,7 +25,7 @@ namespace ProjectDATN.Data.ViewModels
         public string Name { get; set; }
         public string Content { get; set; }
 
-        List<NewImages>? Images { get; set; }
+        
 
     }
 }

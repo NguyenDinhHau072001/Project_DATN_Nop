@@ -44,6 +44,7 @@ namespace ProjectDATN.Data.EF
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<PromotionV1> Promotions { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
     }
 }
