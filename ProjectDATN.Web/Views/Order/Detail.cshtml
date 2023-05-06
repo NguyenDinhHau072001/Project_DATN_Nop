@@ -117,7 +117,7 @@
                 <!-- this row will not appear when printing -->
                 <div class="row no-print">
                     <div class="col-12">
-                        @if(order.Status == ProjectDATN.Data.Enums.OrderStatus.InProgress || order.Status == ProjectDATN.Data.Enums.OrderStatus.Confirmed)
+                        @if(order.Status == ProjectDATN.Data.Enums.OrderStatus.InProgress || order.Status == ProjectDATN.Data.Enums.OrderStatus.Confirmed || order.Status == ProjectDATN.Data.Enums.OrderStatus.Shipping )
                         {
                             
                             <button type="button" id="btn-status" class="btn btn-danger" data-id="4">

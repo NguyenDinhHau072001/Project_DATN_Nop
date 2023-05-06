@@ -160,6 +160,7 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
 				product.PerchasePrice = vm.PerchasePrice;
 				product.BandID = vm.BandID;
 				product.CateID = vm.CateID;
+				product.Quality = vm.Quantity;
 				product.PerchasePrice = vm.PerchasePrice;
 
 				//_db.Products.Update(model);

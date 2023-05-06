@@ -19,7 +19,13 @@ namespace ProjectDATN.Web.Controllers
 			var products = new List<Product>();
 			if(search != null && search != "")
 			{
-				products = _db.Products.Where(x=>x.ProName.Contains(search)).ToList();
+				products = (from p in _db.Products join 
+								c in _db.Categories on
+								p.CateID equals c.Id join
+								b in _db.Brands on
+								p.BandID equals b.Id
+								where p.ProName.Contains(search) || b.Name.Contains(search) || c.CateName.Contains(search)
+								select p).ToList();
 			}
 			else
 			{

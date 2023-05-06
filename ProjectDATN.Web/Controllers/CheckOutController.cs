@@ -67,7 +67,14 @@ namespace ProjectDATN.Web.Controllers
                 vm.UserId = khachhang.Id;
                 vm.FullName = khachhang.UserName;
                 vm.Email = khachhang.Email;
-                vm.PhoneNumber = khachhang.PhoneNumber;
+                if (khachhang.PhoneNumber != null)
+                {
+                    vm.PhoneNumber = khachhang.PhoneNumber;
+                }
+                else
+                {
+                    vm.PhoneNumber = muahang.PhoneNumber;
+                }
                 vm.Address = khachhang.HomeAdress;
                 vm.PhuongXa = muahang.PhuongXa;
                 vm.Tinh = muahang.Tinh;
@@ -159,5 +166,11 @@ namespace ProjectDATN.Web.Controllers
                 return View();
             }
         }
+
+        //public ThanhToanOnl()
+        //{
+        //    var cartItems = HttpContext.Session.Get<List<CartItem>>("GioHang");
+        //    string endpoint = ConfigurationManager.AppSettings["endpoint"].ToString();
+        //}
     }
 }

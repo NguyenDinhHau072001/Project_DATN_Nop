@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/AccountAdmin/LoginAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudEFkbWluXExvZ2luQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Account/LoginAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxMb2dpbkFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

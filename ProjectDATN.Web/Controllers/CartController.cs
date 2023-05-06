@@ -70,7 +70,8 @@ namespace ProjectDATN.Web.Controllers
                     ProductName = product.ProName,
                     Image = product.Image,
                     Price = product.PerchasePrice,
-                    Quantity = quantity
+                    Quantity = quantity,
+                    MaxQuantity = _db.Products.FirstOrDefault(p => p.Id == id).Quality
                 };
                 myCart.Add(item);
 

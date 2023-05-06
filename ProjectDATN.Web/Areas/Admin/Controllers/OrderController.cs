@@ -55,7 +55,13 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
         public IActionResult ChangeStatus(int id, int status)
         {
             var order = _db.Orders.FirstOrDefault(x => x.Id == id);
-            if(status == 1)
+            var orderDetail = _db.OrderDetails.Join(_db.Orders, detail => detail.OrderId, oder => oder.Id, (detail, oder) => new
+            {
+                detail.ProductId,
+                oder.Id,
+                detail.Quantity
+            }).Where(x => x.Id == id).ToList();
+            if (status == 1)
             {
                 order.Status = Data.Enums.OrderStatus.Confirmed;
             }
@@ -70,6 +76,14 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
             if (status == 4)
             {
                 order.Status = Data.Enums.OrderStatus.Canceled;
+                foreach (var item in orderDetail)
+                {
+                    var product = _db.Products.FirstOrDefault(x => x.Id == item.ProductId);
+                    product.Quality = product.Quality + item.Quantity;
+                    product.SaleQuatity = product.SaleQuatity - item.Quantity;
+                    _db.Products.Update(product);
+                    _db.SaveChanges();
+                }
             }
             _db.SaveChanges();
             _notify.Success("Thay đổi trạng thái đơn hàng thành công!");

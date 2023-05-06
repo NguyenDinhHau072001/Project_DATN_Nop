@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="text-align:center;font-size:25px">Hãy điền feedback của bạn vào form dưới đây</h1>
+<h1 style="text-align:center;font-size:25px">Hãy góp ý cho chúng tôi để có thể cải thiện chức năng của chúng tôi</h1>
 @if (TempData["AlertMessage"] != null)
 {
     <div class="alert alert-success" style="background-color:aqua; font-size:15px">
@@ -22,24 +22,24 @@
 
             <div class="form-group" style="margin:20px;text-align: left;padding-left: 185px">
                 <h3 style="font-size:18px">Họ và tên</h3>
-                <input type="text" asp-area="" asp-for="Name" class="form-control" style="border:1px solid gray; height:25px;width:800px" />
+                <input type="text" asp-area="" asp-for="Name" class="form-control" style="border:1px solid gray; height:35px;width:800px" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
             <div class="form-group" style="margin:20px;text-align: left;padding-left: 185px">
                 <h3 style="font-size:18px">Email</h3>
-                <input type="email" asp-area="" asp-for="Email" class="form-control" style="border:1px solid gray; height:25px;width:800px" />
+                <input type="email" asp-area="" asp-for="Email" class="form-control" style="border:1px solid gray; height:35px;width:800px" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
             <div class="form-group" style="margin:20px;text-align: left;padding-left: 185px">
                 <h3 style="font-size:18px">Số điện thoại</h3>
-                <input asp-area="" asp-for="PhoneNumber" class="form-control" style="border:1px solid gray; height:25px;width:800px" />
+                <input asp-area="" asp-for="PhoneNumber" class="form-control" style="border:1px solid gray; height:35px;width:800px" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group" style="margin:20px;text-align: left;padding-left: 185px">
                 <h3 style="font-size:18px">Nội dung</h3>
-                <textarea asp-area="" asp-for="Message" class="" style="border:1px solid gray; height:100px; width:800px"></textarea>
+                <textarea asp-area="" asp-for="Message" class="" style="border:1px solid gray; height:300px; width:800px;"></textarea>
                 <span asp-validation-for="Message" class="text-danger"></span>
             </div>
             <div class="form-group">
