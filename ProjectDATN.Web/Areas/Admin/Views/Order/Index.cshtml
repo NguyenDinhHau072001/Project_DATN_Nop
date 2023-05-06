@@ -30,6 +30,7 @@
             <th>Tổng tiền</th>
             <th>Thanh toán</th>
             <th>Trạng thái</th>
+            <th>Ngày đặt</th>
             <th></th>
         </tr>
     </thead>
@@ -51,6 +52,7 @@
                     <td style="color: #e35a00">Chưa thanh toán</td>
                 }
                 <td>@item.Status</td>
+                <td>@DateTime.Now</td>
                 <td>
                     <a asp-area="Admin" class="btn btn-primary mx-2" asp-action="Detail" asp-route-id="@item.Id" asp-controller="Order"><i class="bi bi-pencil-square"></i> Xem chi tiết</a>
                   

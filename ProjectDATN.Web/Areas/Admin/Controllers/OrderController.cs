@@ -41,7 +41,9 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
                     ProductName = _db.Products.FirstOrDefault(x => x.Id == item.ProductId).ProName,
                     Price = (decimal)(_db.Products.FirstOrDefault(x => x.Id == item.ProductId)?.PerchasePrice),
                     Quantity = item.Quantity,
-                    TotalPrice = item.Price
+                    TotalPrice = item.Price,
+                    CreatedDate = DateTime.Now
+
                 };
                 listOrderDetailVM.Add(vm);
             }
