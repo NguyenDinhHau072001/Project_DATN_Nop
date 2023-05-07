@@ -127,6 +127,7 @@ namespace ProjectDATN.Web.Controllers
                 var oderID = HttpContext.Session.GetString("OderId");
                 HttpContext.Session.Remove("GioHang");
                 _notyfService.Success("Đơn hàng đã đặt thành công");
+                
                 return RedirectToAction("Success");
                 //}
             }

@@ -7,6 +7,7 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
     public class ThongKeController : Controller
     {
         private readonly ApplicationDBContext _db;
+        
         public ThongKeController(ApplicationDBContext db)
         {
             _db = db;
@@ -22,14 +23,15 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
             for (int i = 0; i < 12; i++)
             {
 
-                dateX[i] = (dateTimeNow.Month.ToString() + "/" + dateTimeNow.Year.ToString()).ToString();
-                var temp = _db.Orders.Where(a => a.OrderDate.Month == dateTimeNow.Month && a.Status == Data.Enums.OrderStatus.Success).Sum(s => s.TotalPrice);
+                //dateX[i] = (dateTimeNow.Month.ToString() + "/" + dateTimeNow.Year.ToString()).ToString();
+                dateX[i] = $"tháng {i + 1}";
+                var temp = _db.Orders.Where(a => a.OrderDate.Month == i+1 && a.Status == Data.Enums.OrderStatus.Success).Sum(s => s.TotalPrice);
                 if (temp == null)
                 {
                     temp = 0;
                 }
                 data[i] = temp.ToString();
-                dateTimeNow = dateTimeNow.AddMonths(1);
+               // dateTimeNow = dateTimeNow.AddMonths(1);
             }
             ViewBag.dateX = dateX;
             ViewBag.data = data;
