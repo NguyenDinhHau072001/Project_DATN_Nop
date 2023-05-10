@@ -16,6 +16,7 @@ namespace ProjectDATN.Data.Entities
         [BindProperty, DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime OrderDate { set; get; } = DateTime.Now;
         public string UserId { set; get; }
+        public string? ShipperId { set; get; }
         public string? UserName { set; get; }
         public string Address { set; get; }
         public string PhoneNumber { set; get; }

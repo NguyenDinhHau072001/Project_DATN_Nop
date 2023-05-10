@@ -1,6 +1,7 @@
 ﻿@using X.PagedList;
 @using X.PagedList.Mvc.Core
 @using X.PagedList.Web.Common;
+@using ProjectDATN.Web.Helpers
 @model IPagedList<ProjectDATN.Data.Entities.Order>
 @{
    
@@ -43,7 +44,7 @@
                     <td>@item.Id</td>
                     <td>@item.TotalPrice</td>
 
-                    @if (item.Status == ProjectDATN.Data.Enums.OrderStatus.Success)
+                    @if (item.Status == ProjectDATN.Data.Enums.OrderStatus.Success || item.Payment == ProjectDATN.Data.Enums.PaymentStatus.vnpay)
                     {
                         <td style="color: blue">Đã thanh toán</td>
                     }
@@ -51,7 +52,7 @@
                     {
                         <td style="color: #e35a00">Chưa thanh toán</td>
                     }
-                    <td>@item.Status</td>
+                    <td>@ExtensionHelpers.TinhTrang(Convert.ToInt32(item.Status))</td>
                     <td>@item.OrderDate</td>
                     <td>
                         <a asp-area="" class="btn btn-primary mx-2" asp-action="Detail" asp-route-id="@item.Id" asp-controller="Order"><i class="bi bi-pencil-square"></i> Xem chi tiết</a>

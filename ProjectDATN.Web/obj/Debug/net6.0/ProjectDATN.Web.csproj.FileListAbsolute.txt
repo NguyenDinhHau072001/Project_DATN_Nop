@@ -592,3 +592,5 @@ D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\bin\Debug\net6.0\ProjectDATN.W
 D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\bin\Debug\net6.0\ProjectDATN.Web.pdb
 D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\obj\Debug\net6.0\ProjectDATN.Web.genruntimeconfig.cache
 D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\obj\Debug\net6.0\ref\ProjectDATN.Web.dll
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\bin\Debug\net6.0\Castle.Core.dll
+D:\DATN_BanChinh\Project_DATN_Nop\ProjectDATN.Web\bin\Debug\net6.0\Moq.dll

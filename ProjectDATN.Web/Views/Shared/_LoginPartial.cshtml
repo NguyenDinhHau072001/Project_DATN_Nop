@@ -4,8 +4,13 @@
 
 @inject SignInManager<AppUser> SignInManager
 @inject UserManager<AppUser> UserManager
+@{
+    var loggin = new AppUser();
+    loggin = UserManager.Users.FirstOrDefault(x => x.UserName == User.Identity!.Name);
+}
 
-@if (SignInManager.IsSignedIn(User))
+@*@if (SignInManager.IsSignedIn(User) )*@
+@if (loggin != null && SignInManager.IsSignedIn(User))
 {
     <form asp-area="Identity" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right" style="margin-top:-1px">
         <ul class="nav navbar-nav navbar-right" style="list-style:none;display:flex">

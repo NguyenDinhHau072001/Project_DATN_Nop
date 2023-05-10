@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\CheckOutController.cs~RF6b82646.TMP" />
     <None Remove="Views\Promotion\Index.cshtml~RF207c557.TMP" />
     <None Remove="Views\Shared\Components\ProductInCart\Default.cshtml~RF99045c0.TMP" />
   </ItemGroup>

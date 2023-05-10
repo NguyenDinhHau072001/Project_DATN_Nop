@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectDATN.Data.EF;
 using ProjectDATN.Data.Entities;
+using ProjectDATN.Data.Enums;
 using ProjectDATN.Data.ViewModels;
 using ProjectDATN.Web.Helpers;
 using ProjectDATN.Web.Models;
+using ProjectDATN.Web.Services;
 
 namespace ProjectDATN.Web.Controllers
 {
@@ -14,11 +16,13 @@ namespace ProjectDATN.Web.Controllers
 
         private readonly ApplicationDBContext _db;
         public INotyfService _notyfService { get; }
+        private readonly IVnPayService _vnPayService;
 
-        public CheckOutController(ApplicationDBContext db, INotyfService notyfService)
+        public CheckOutController(ApplicationDBContext db, INotyfService notyfService, IVnPayService vnPayService)
         {
             _db = db;
             _notyfService = notyfService;
+            _vnPayService = vnPayService;
         }
 
         public List<CartItem> Carts
@@ -56,7 +60,7 @@ namespace ProjectDATN.Web.Controllers
 
         [HttpPost]
 
-        public IActionResult Index(MuaHangVM muahang)
+        public IActionResult Index(MuaHangVM muahang, IFormCollection form)
         {
             var cart = HttpContext.Session.Get<List<CartItem>>("GioHang");
             var taikhoanId = HttpContext.Session.GetString("Id");
@@ -79,6 +83,15 @@ namespace ProjectDATN.Web.Controllers
                 vm.PhuongXa = muahang.PhuongXa;
                 vm.Tinh = muahang.Tinh;
                 vm.Huyen = muahang.Huyen;
+                vm.Payment = muahang.Payment;
+                if (muahang.Payment.Equals("cod"))
+                {
+                    vm.Payment = Data.Enums.PaymentStatus.cod;
+                }
+                else
+                {
+                    vm.Payment = Data.Enums.PaymentStatus.vnpay;
+                }
             }
 
             try
@@ -126,9 +139,25 @@ namespace ProjectDATN.Web.Controllers
                 HttpContext.Session.SetString("OrderId", donhang.Id.ToString());
                 var oderID = HttpContext.Session.GetString("OderId");
                 HttpContext.Session.Remove("GioHang");
-                _notyfService.Success("Đơn hàng đã đặt thành công");
-                
-                return RedirectToAction("Success");
+
+                if (form["PaymentMethod"] == "cod")
+                {
+                    _notyfService.Success("Đơn hàng đã đặt thành công");
+                    
+
+                    return RedirectToAction("Success");
+                }
+                else
+                {
+                    var url = _vnPayService.CreatePaymentUrl(donhang, HttpContext);
+
+                    return Redirect(url);
+                   // _notyfService.Success("Thanh toán bằng VNPAY ở đây");
+
+                   // return View();
+                }
+
+               
                 //}
             }
             catch (Exception ex)
@@ -138,6 +167,13 @@ namespace ProjectDATN.Web.Controllers
             ViewBag.GioHang = cart;
             return View(vm);
 
+        }
+        public IActionResult PaymentCallback()
+        {
+            var response = _vnPayService.PaymentExecute(Request.Query);
+
+            //return Json(response);
+            return RedirectToAction("Success");
         }
 
         public IActionResult Success()
@@ -160,6 +196,8 @@ namespace ProjectDATN.Web.Controllers
                 successVM.Address = donhang.Address;
                 successVM.PhoneNumber = khachhang.PhoneNumber;
                 successVM.OrderStatus = _db.Orders.FirstOrDefault(x => x.Id == successVM.OrderID)?.Status;
+
+                _notyfService.Success("Bạn đã đặt hàng thành công!");
                 return View(successVM);
             }
             catch

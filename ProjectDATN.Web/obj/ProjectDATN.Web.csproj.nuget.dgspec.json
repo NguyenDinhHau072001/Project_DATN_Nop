@@ -79,6 +79,10 @@
             "MimeKit": {
               "target": "Package",
               "version": "[3.6.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
             }
           },
           "imports": [

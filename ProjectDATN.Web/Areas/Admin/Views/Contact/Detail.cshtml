@@ -1,0 +1,13 @@
+﻿@model ProjectDATN.Data.Entities.Contact
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Chi tiết phản hồi</h1>
+
+<h4>Tên khách hàng : @Model.Name</h4>
+<h4>Email : @Model.Email</h4>
+
+<pre>@Model.Message</pre>
+

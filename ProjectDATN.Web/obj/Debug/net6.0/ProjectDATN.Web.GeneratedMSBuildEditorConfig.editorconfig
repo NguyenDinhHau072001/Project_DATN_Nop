@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Contact/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Areas/Admin/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -430,6 +434,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/VNPay/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVk5QYXlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DATN_BanChinh/Project_DATN_Nop/ProjectDATN.Web/Views/_ViewImports.cshtml]

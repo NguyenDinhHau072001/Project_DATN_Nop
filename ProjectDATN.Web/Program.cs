@@ -18,7 +18,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(connectString);
 });
 
-
+builder.Services.AddScoped<IVnPayService, VnPayService>();
 builder.Services.AddMvc();
 
 //For cart

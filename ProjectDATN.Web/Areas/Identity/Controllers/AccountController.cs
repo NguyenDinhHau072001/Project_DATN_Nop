@@ -150,9 +150,19 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 								 where (u.UserName == model.UserNameOrEmail || u.Email == model.UserNameOrEmail) && r.Name == "Admin"
 								 select u).ToList();
 
-				if (linkAdmin.Count > 0)
+                var linkShipper = (from u in _db.Users
+                             join ur in _db.UserRoles on u.Id equals ur.UserId
+                             join r in _db.Roles on ur.RoleId equals r.Id
+                             where (u.UserName == model.UserNameOrEmail || u.Email == model.UserNameOrEmail) && r.Name == "Shipper"
+                             select u).ToList();
+
+                if (linkAdmin.Count > 0)
 				{
 					return LocalRedirect("/Admin");
+				}
+				else if (linkShipper.Count > 0)
+				{
+					return LocalRedirect("/Shipper");
 				}
 
                 return LocalRedirect(returnUrl);

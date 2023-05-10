@@ -15,7 +15,7 @@
 						<img src="~/uploads/images/FrontEnd/ip14.jpg" alt="">
 					</div>
 					<div class="shop-body">
-						<h3>Smartphone<br>Collection</h3>
+						<h3>Điện thoại<br>thông minh</h3>
 						<a asp-action="GetProductByCateId" asp-controller="Product" asp-area="" asp-route-id="1" class="cta-btn">Xem ngay <i class="fa fa-arrow-circle-right"></i></a>
 					</div>
 				</div>
@@ -28,8 +28,8 @@
 						<img src="~/uploads/images/FrontEnd/macbook.jpg" alt="">
 					</div>
 					<div class="shop-body">
-						<h3>Laptop<br>Collection</h3>
-						<a href="Product/GetProductByCateId/2" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+						<h3>Laptop<br>chuyên dụng</h3>
+						<a href="Product/GetProductByCateId/2" class="cta-btn">Xem ngay <i class="fa fa-arrow-circle-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -41,8 +41,8 @@
 						<img src="~/uploads/images/FrontEnd/camera.jpg" alt="">
 					</div>
 					<div class="shop-body">
-						<h3>Cameras<br>Collection</h3>
-						<a href="Product/GetProductByCateId/6" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+						<h3>Máy ảnh<br>chất lượng</h3>
+						<a href="Product/GetProductByCateId/6" class="cta-btn">Xem ngay <i class="fa fa-arrow-circle-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -64,12 +64,12 @@
 				<div class="section-title">
 					<h3 class="title">Sản phẩm mới</h3>
 					@*<div class="section-nav">
-						<ul class="section-tab-nav tab-nav">
-							<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-							<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-							<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-							<li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-						</ul>
+					<ul class="section-tab-nav tab-nav">
+					<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
+					<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
+					<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
+					<li><a data-toggle="tab" href="#tab1">Accessories</a></li>
+					</ul>
 					</div>*@
 				</div>
 			</div>
@@ -82,7 +82,7 @@
 						<div id="tab1" class="tab-pane active">
 							<div class="products-slick" data-nav="#slick-nav-1">
 								@await Component.InvokeAsync(typeof(NewProductViewComponent),new {name="NewProducts"})
-								
+
 							</div>
 							<div id="slick-nav-1" class="products-slick-nav"></div>
 						</div>
@@ -154,12 +154,12 @@
 				<div class="section-title">
 					<h3 class="title">Sản phẩm bán chạy</h3>
 					@*<div class="section-nav">
-						<ul class="section-tab-nav tab-nav">
-							<li class="active"><a data-toggle="tab" href="#tab2">laptops</a></li>
-							<li><a data-toggle="tab" href="#tab2">smartphones</a></li>
-							<li><a data-toggle="tab" href="#tab2">cameras</a></li>
-							<li><a data-toggle="tab" href="#tab2">accessories</a></li>
-						</ul>
+					<ul class="section-tab-nav tab-nav">
+					<li class="active"><a data-toggle="tab" href="#tab2">laptops</a></li>
+					<li><a data-toggle="tab" href="#tab2">smartphones</a></li>
+					<li><a data-toggle="tab" href="#tab2">cameras</a></li>
+					<li><a data-toggle="tab" href="#tab2">accessories</a></li>
+					</ul>
 					</div>*@
 				</div>
 			</div>
@@ -175,7 +175,7 @@
 								@await Component.InvokeAsync(typeof(NewProductViewComponent),new {name="TopSale"})
 								<!-- /product -->
 								<!-- product -->
-								
+
 							</div>
 							<div id="slick-nav-2" class="products-slick-nav"></div>
 						</div>

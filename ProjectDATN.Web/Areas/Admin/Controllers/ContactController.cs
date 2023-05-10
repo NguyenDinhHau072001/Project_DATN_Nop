@@ -22,5 +22,11 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
 
             return View(listContact.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
         }
+
+        public IActionResult Detail(int id)
+        {
+            var contact = _db.Contacts.FirstOrDefault(x => x.Id == id);
+            return View(contact);
+        }
     }
 }

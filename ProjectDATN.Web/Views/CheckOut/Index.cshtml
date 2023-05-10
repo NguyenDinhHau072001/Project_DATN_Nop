@@ -113,12 +113,12 @@
                         <div class="form-group">
                             <div class="col-md-12"><strong>Phương thức thanh toán:</strong></div>
                             <div class="col-md-12">
-                                <input type="radio"  value="1" id="vnpay" />
+                                <input type="radio"  value="vnpay" id="vnpay" name="PaymentMethod" asp-for="@Model.Payment" />
                                 <label for="vnpay">
                                     <img src="~/Front/img/vnpay.jpg" style="width:70px" />
                                     VNPay
                                 </label><br />
-                                <input type="radio"  value="0" id="shipcod" />
+                                <input type="radio"  value="cod" id="shipcod" name="PaymentMethod" asp-for="@Model.Payment"/>
                                 <label for="shipcod"><i class="fa-solid fa-truck-arrow-right"></i>ShipCod</label><br />
                             </div>
                         </div>
@@ -129,7 +129,16 @@
             </div>
 
             <div>
+               @* @if(Model.Payment == ProjectDATN.Data.Enums.PaymentStatus.cod)
+                {
+                    <button type="submit" class="btn btn-sm btn-danger">Tiếp tục thanh toán</button>
+                }
+                else
+                {
+                    <button><a asp-action="Index" asp-controller="VNPay" asp-area="">Tiếp tục thanh toán</a></button>
+                }*@
                 <button type="submit" class="btn btn-sm btn-danger">Tiếp tục thanh toán</button>
+
             </div>
 
         </form>

@@ -1,6 +1,7 @@
 ﻿@using X.PagedList.Mvc.Core;
 @using X.PagedList.Web.Common;
 @using X.PagedList;
+@using ProjectDATN.Web.Helpers
 @model IPagedList<ProjectDATN.Data.Entities.Contact>
 @{
     ViewData["Title"] = "Index";
@@ -21,9 +22,9 @@
             <td class="col-md-2">@item.Name</td>
             <td class="col-md-2">@item.PhoneNumber</td>
             <td class="col-md-2">@item.Email</td>
-            <td class="col-md-4">@item.Message</td>
+            <td class="col-md-4">@ExtensionHelpers.FormatText(item.Message)</td>
             <td class="col-md-2" style="text-align:center">
-                <a href=""><i class="fas fa-book-reader" style="font-size:25px"></i></a>
+                <a asp-action="Detail" asp-controller="Contact" asp-area="Admin" asp-route-id="@item.Id"><i class="fas fa-book-reader" style="font-size:25px"></i></a>
             </td>
         </tr>
     }

@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<ProjectDATN.Data.ViewModels.OrderDetailVM>
 @using ProjectDATN.Data.Entities
-
+@using ProjectDATN.Web.Helpers
 @{
     ViewData["Title"] = "Chi tiết đơn hàng";
     var order = (Order)ViewBag.Order;
@@ -87,8 +87,8 @@
                 <div class="row">
                     <!-- accepted payments column -->
                     <div class="col-6">
-                        <p class="lead">Payment Methods: @order.Payment</p>
-                        <p>Tình trạng: <span id="tinhtrang"> @order.Status</span></p>
+                        <p class="lead">Loại thanh toán: @order.Payment</p>
+                        <p>Tình trạng: <span id="tinhtrang">@ExtensionHelpers.TinhTrang(Convert.ToInt32(order.Status)) </span></p>
                     </div>
                     <!-- /.col -->
                     <div class="col-6">
