@@ -8609,6 +8609,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\templates\\send1.html",
+      "PackagePath": "staticwebassets\\templates\\send1.html"
+    },
+    {
+      "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\templates\\send2.html",
+      "PackagePath": "staticwebassets\\templates\\send2.html"
+    },
+    {
       "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\FrontEnd\\Background.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\FrontEnd\\Background.jpg"
     },
@@ -8859,6 +8867,10 @@
     {
       "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\d9223936-aca8-4c3f-9131-fd9717320a7d_galaxy.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\product\\d9223936-aca8-4c3f-9131-fd9717320a7d_galaxy.jpg"
+    },
+    {
+      "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\da406557-25c5-44a9-9f22-1b4c224a1f54_casepc1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\product\\da406557-25c5-44a9-9f22-1b4c224a1f54_casepc1.jpg"
     },
     {
       "Id": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\df0ddcd5-7aa3-4f8e-ac6a-2f4f7c171e5e_macbook.jpg",

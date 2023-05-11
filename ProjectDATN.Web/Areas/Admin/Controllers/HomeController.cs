@@ -25,6 +25,9 @@ namespace ProjectDATN.Web.Areas.Admin.Controllers
 			float rate = (float)sale/(sale+quantity);
 
 			ViewBag.Rate = (rate*100).ToString("0.00");
+
+			decimal doanhthu = _dbContext.Orders.Where(x=>x.OrderDate.Month == DateTime.Now.Month && x.Status == Data.Enums.OrderStatus.Success).Sum(x => x.TotalPrice);
+			ViewBag.DoanhThu = doanhthu.ToString("#,##0") + " VND";
 			return View();
 		}
 

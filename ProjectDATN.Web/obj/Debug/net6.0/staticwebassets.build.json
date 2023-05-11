@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0+GK5kUBTZ6+eW44GPCpTtaGStVhviWKw/APwojC5C0=",
+  "Hash": "gixkbj67TYheVcmm/y5jUXJeR99zmJE4nZkp304RgO0=",
   "Source": "ProjectDATN.Web",
   "BasePath": "_content/ProjectDATN.Web",
   "Mode": "Default",
@@ -37706,6 +37706,40 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\templates\\send1.html",
+      "SourceId": "ProjectDATN.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\",
+      "BasePath": "_content/ProjectDATN.Web",
+      "RelativePath": "templates/send1.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\send1.html"
+    },
+    {
+      "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\templates\\send2.html",
+      "SourceId": "ProjectDATN.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\",
+      "BasePath": "_content/ProjectDATN.Web",
+      "RelativePath": "templates/send2.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\send2.html"
+    },
+    {
       "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\FrontEnd\\Background.jpg",
       "SourceId": "ProjectDATN.Web",
       "SourceType": "Discovered",
@@ -38775,6 +38809,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\product\\d9223936-aca8-4c3f-9131-fd9717320a7d_galaxy.jpg"
+    },
+    {
+      "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\da406557-25c5-44a9-9f22-1b4c224a1f54_casepc1.jpg",
+      "SourceId": "ProjectDATN.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\",
+      "BasePath": "_content/ProjectDATN.Web",
+      "RelativePath": "uploads/images/product/da406557-25c5-44a9-9f22-1b4c224a1f54_casepc1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\product\\da406557-25c5-44a9-9f22-1b4c224a1f54_casepc1.jpg"
     },
     {
       "Identity": "D:\\DATN_BanChinh\\Project_DATN_Nop\\ProjectDATN.Web\\wwwroot\\uploads\\images\\product\\df0ddcd5-7aa3-4f8e-ac6a-2f4f7c171e5e_macbook.jpg",

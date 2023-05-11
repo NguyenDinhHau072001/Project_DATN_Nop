@@ -243,7 +243,7 @@ namespace ProjectDATN.Web.Areas.Identity.Controllers
 
 					await _emailSender.SendEmailAsync(model.Email,
 						"Xác nhận địa chỉ email",
-						@$"Bạn đã đăng ký tài khoản trên RazorWeb,
+						@$"Bạn đã đăng ký tài khoản trên NDHShop,
                            hãy <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>bấm vào đây</a>
                            để kích hoạt tài khoản.");
 

@@ -14,12 +14,12 @@
                 <div class="inner">
                     <h3>@ViewBag.OrderCount</h3>
 
-                    <p>New Orders</p>
+                    <p>Số đơn hàng</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-bag"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a asp-action="Index" asp-controller="Order" asp-area="Admin" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -34,7 +34,7 @@
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a asp-action="Index" asp-controller="Product" asp-area="Admin" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -49,7 +49,7 @@
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a asp-action="Index" asp-controller="User" asp-area="Admin" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -57,14 +57,14 @@
             <!-- small box -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                    <h3>65</h3>
+                    <h3>@ViewBag.DoanhThu</h3>
 
-                    <p>Unique Visitors</p>
+                    <p>Tổng doanh thu trong tháng @DateTime.Now.Month</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a asp-area="Admin" asp-action="Index" asp-controller="ThongKe" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->

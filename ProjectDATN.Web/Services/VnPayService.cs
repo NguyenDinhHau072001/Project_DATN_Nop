@@ -23,7 +23,7 @@ namespace ProjectDATN.Web.Services
             pay.AddRequestData("vnp_Version", _configuration["Vnpay:Version"]);
             pay.AddRequestData("vnp_Command", _configuration["Vnpay:Command"]);
             pay.AddRequestData("vnp_TmnCode", _configuration["Vnpay:TmnCode"]);
-            pay.AddRequestData("vnp_Amount", ((int)model.TotalPrice * 100).ToString());
+            pay.AddRequestData("vnp_Amount", ((long)(model.TotalPrice *100)).ToString());
             pay.AddRequestData("vnp_CreateDate", timeNow.ToString("yyyyMMddHHmmss"));
             pay.AddRequestData("vnp_CurrCode", _configuration["Vnpay:CurrCode"]);
             pay.AddRequestData("vnp_IpAddr", pay.GetIpAddress(context));

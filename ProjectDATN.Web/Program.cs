@@ -19,6 +19,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 });
 
 builder.Services.AddScoped<IVnPayService, VnPayService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddMvc();
 
 //For cart

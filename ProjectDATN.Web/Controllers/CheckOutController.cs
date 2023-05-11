@@ -1,4 +1,6 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using MessagePack;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectDATN.Data.EF;
@@ -17,12 +19,16 @@ namespace ProjectDATN.Web.Controllers
         private readonly ApplicationDBContext _db;
         public INotyfService _notyfService { get; }
         private readonly IVnPayService _vnPayService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IEmailService _emailService;
 
-        public CheckOutController(ApplicationDBContext db, INotyfService notyfService, IVnPayService vnPayService)
+        public CheckOutController(ApplicationDBContext db, INotyfService notyfService, IVnPayService vnPayService, IWebHostEnvironment webHostEnviroment, IEmailService emailService)
         {
             _db = db;
             _notyfService = notyfService;
             _vnPayService = vnPayService;
+            _webHostEnvironment = webHostEnviroment;
+            _emailService = emailService;
         }
 
         public List<CartItem> Carts
@@ -75,7 +81,14 @@ namespace ProjectDATN.Web.Controllers
 
                 vm.UserId = khachhang.Id;
                 vm.FullName = khachhang.UserName;
-                vm.Email = khachhang.Email;
+                if(khachhang.Email != null)
+                {
+                    vm.Email = khachhang.Email;
+                }
+                else
+                {
+                    vm.Email = muahang.Email;
+                }
                 if (khachhang.PhoneNumber != null)
                 {
                     vm.PhoneNumber = khachhang.PhoneNumber;
@@ -126,6 +139,7 @@ namespace ProjectDATN.Web.Controllers
                 {
                     vm.Payment = Data.Enums.PaymentStatus.vnpay;
                 }
+                khachhang.Email = muahang.Email;
                 khachhang.HomeAdress = muahang.Address;
                 khachhang.PhoneNumber = muahang.PhoneNumber;
                 khachhang.Tinh = muahang.Tinh;
@@ -146,11 +160,9 @@ namespace ProjectDATN.Web.Controllers
                 donhang.UserName = _db.Users.FirstOrDefault(x => x.Id == vm.UserId)?.UserName;
                 donhang.Address = vm.Tinh + " - " + vm.Huyen + " - " + vm.PhuongXa + " - " + vm.Address;
                 donhang.PhoneNumber = vm.PhoneNumber;
-                donhang.TotalPrice = Convert.ToDecimal(cart.Sum(x => x.PriceTotal));
+                donhang.TotalPrice =Convert.ToDecimal( cart!.Sum(x => x.PriceTotal));
                 donhang.Payment = vm.Payment;
                 donhang.IsPay = false;
-
-
                 donhang.Status = 0;
                 _db.Add(donhang);
                 _db.SaveChanges();
@@ -185,15 +197,75 @@ namespace ProjectDATN.Web.Controllers
                     donhang.Payment = PaymentStatus.cod;
                     _db.SaveChanges();
                     //_notyfService.Success("Đơn hàng đã đặt thành công");
-                    return RedirectToAction("Success");
+
+                    var strSanpham = "";
+                    decimal thanhtien = 0;
+                    foreach (var sp in cart)
+                    {
+                        strSanpham += "<tr>";
+                        strSanpham += "<td>" + sp.ProductName + "</td>";
+                        strSanpham += "<td>" + sp.Quantity + "</td>";
+                        strSanpham += "<td>" + sp.PriceTotal.ToString("#,##0") +" VND" + "</td>";
+                        strSanpham += "</tr>";
+                        thanhtien += sp.PriceTotal;
+                    }
+                    string pathContent = System.IO.File.ReadAllText(Path.Combine(_webHostEnvironment.WebRootPath, "templates/send2.html"));
+                    pathContent = pathContent.Replace("{{MaDon}}", donhang.Id.ToString());
+                    pathContent = pathContent.Replace("{{SanPham}}", strSanpham);
+                    pathContent = pathContent.Replace("{{TenKhachHang}}", donhang.UserName);
+                    pathContent = pathContent.Replace("{{SoDienThoai}}", donhang.PhoneNumber);
+                    pathContent = pathContent.Replace("{{Email}}", vm.Email);
+                    pathContent = pathContent.Replace("{{DiaChi}}", donhang.Address);
+                    pathContent = pathContent.Replace("{{NgayDat}}", donhang.OrderDate.ToString("dd/MM/yyyy"));
+                    pathContent = pathContent.Replace("{{ThanhTien}}", donhang.TotalPrice.ToString("#,##0") + " VND");
+                    //pathContent = pathContent.Replace("{{TongTien}}", ExtensionHelper.ToVnd(thanhtien + 30000));
+                    pathContent = pathContent.Replace("{{PhuongThuc}}", "Thanh toán tiền mặt");
+
+                    var checkSend = _emailService.Send("NDHShop", "Đơn hàng #" + donhang.Id.ToString(), pathContent.ToString(), vm.Email);
+                    if (checkSend)
+                    {
+                        return RedirectToAction("Success");
+                    }
+
+                    return RedirectToAction("Fail");
                 }
                 else
                 {
                     var url = _vnPayService.CreatePaymentUrl(donhang, HttpContext);
                     donhang.Payment = PaymentStatus.vnpay;
                     _db.SaveChanges();
+                    var strSanpham = "";
+                    decimal thanhtien = 0;
+                    foreach (var sp in cart)
+                    {
+                        strSanpham += "<tr>";
+                        strSanpham += "<td>" + sp.ProductName + "</td>";
+                        strSanpham += "<td>" + sp.Quantity + "</td>";
+                        strSanpham += "<td>" + sp.PriceTotal.ToString("#,##0") + " VND" + "</td>";
+                        strSanpham += "</tr>";
+                        thanhtien += sp.PriceTotal;
+                    }
+                    string pathContent = System.IO.File.ReadAllText(Path.Combine(_webHostEnvironment.WebRootPath, "templates/send2.html"));
+                    pathContent = pathContent.Replace("{{MaDon}}", donhang.Id.ToString());
+                    pathContent = pathContent.Replace("{{SanPham}}", strSanpham);
+                    pathContent = pathContent.Replace("{{TenKhachHang}}", donhang.UserName);
+                    pathContent = pathContent.Replace("{{SoDienThoai}}", donhang.PhoneNumber);
+                    pathContent = pathContent.Replace("{{Email}}", vm.Email);
+                    pathContent = pathContent.Replace("{{DiaChi}}", donhang.Address);
+                    pathContent = pathContent.Replace("{{NgayDat}}", donhang.OrderDate.ToString("dd/MM/yyyy"));
+                    pathContent = pathContent.Replace("{{ThanhTien}}", donhang.TotalPrice.ToString("#,##0") + " VND");
+                    //pathContent = pathContent.Replace("{{TongTien}}", ExtensionHelper.ToVnd(thanhtien + 30000));
+                    pathContent = pathContent.Replace("{{PhuongThuc}}", "VNPAY(Đã thanh toán)");
 
-                    return Redirect(url);
+                    var checkSend = _emailService.Send("NDHShop", "Đơn hàng #" + donhang.Id.ToString(), pathContent.ToString(), vm.Email);
+                    if (checkSend)
+                    {
+                        return Redirect(url);
+                    }
+
+                    return RedirectToAction("Fail");
+
+                  
                    // _notyfService.Success("Thanh toán bằng VNPAY ở đây");
 
                    // return View();
@@ -214,7 +286,7 @@ namespace ProjectDATN.Web.Controllers
         {
             var response = _vnPayService.PaymentExecute(Request.Query);
 
-            if(response.UserName == "falsefalse")
+            if(response.UserName != "falsefalse")
             {
                 return RedirectToAction("Fail");
             }
