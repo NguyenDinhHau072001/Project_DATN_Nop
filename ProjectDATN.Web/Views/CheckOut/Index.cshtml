@@ -113,12 +113,12 @@
                         <div class="form-group">
                             <div class="col-md-12"><strong>Phương thức thanh toán:</strong></div>
                             <div class="col-md-12">
-                                <input type="radio"  value="vnpay" id="vnpay" name="PaymentMethod" asp-for="@Model.Payment" />
+                                <input type="radio"  value="vnpay" id="vnpay" name="PaymentMethod" checked  />
                                 <label for="vnpay">
                                     <img src="~/Front/img/vnpay.jpg" style="width:70px" />
                                     VNPay
                                 </label><br />
-                                <input type="radio"  value="cod" id="shipcod" name="PaymentMethod" asp-for="@Model.Payment"/>
+                                <input type="radio"  value="cod" id="shipcod" name="PaymentMethod"/>
                                 <label for="shipcod"><i class="fa-solid fa-truck-arrow-right"></i>ShipCod</label><br />
                             </div>
                         </div>

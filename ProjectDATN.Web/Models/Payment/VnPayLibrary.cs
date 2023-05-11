@@ -28,6 +28,7 @@ namespace ProjectDATN.Web.Models.Payment
             var orderId = Convert.ToInt32(vnPay.GetResponseData("vnp_TxnRef").ToString());
             var vnPayTranId = Convert.ToInt64(vnPay.GetResponseData("vnp_TransactionNo"));
             var vnpResponseCode = vnPay.GetResponseData("vnp_ResponseCode");
+            string vnpTransactionStatus = vnPay.GetResponseData("vnp_TransactionStatus");
             var vnpSecureHash =
                 collection.FirstOrDefault(k => k.Key == "vnp_SecureHash").Value; //hash của dữ liệu trả về
             var orderInfo = vnPay.GetResponseData("vnp_OrderInfo");
@@ -35,19 +36,30 @@ namespace ProjectDATN.Web.Models.Payment
             var checkSignature =
                 vnPay.ValidateSignature(vnpSecureHash, hashSecret); //check Signature
 
-            return new Order()
+
+
+            if (checkSignature)
             {
-                Id = orderId,
-                Address = "abc",
-                UserName = "Hau"
-            };
+               if(vnpResponseCode == "00" && vnpTransactionStatus == "00")
+                {
+                    return new Order()
+                    {
+                        Id = orderId,
+                        Address = "abc",
+                        UserName = "falsefalse"
+                    };
+                }
 
-            //if (!checkSignature)
-            //    return new PaymentResponseModel()
-            //    {
-            //        Success = false
-            //    };
 
+            }
+          
+                return new Order()
+                {
+                    Id = orderId,
+                    Address = "abc",
+                    UserName = "Hau"
+                };
+       
             //return new PaymentResponseModel()
             //{
             //    Success = true,

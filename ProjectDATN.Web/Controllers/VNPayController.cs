@@ -28,8 +28,8 @@ namespace ProjectDATN.Web.Controllers
 
         public IActionResult PaymentCallback()
         {
-            var response = _vnPayService.PaymentExecute(Request.Query);
 
+            var response = _vnPayService.PaymentExecute(Request.Query);
             return Json(response);
         }
     }

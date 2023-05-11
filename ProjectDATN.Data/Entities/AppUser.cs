@@ -20,5 +20,8 @@ namespace ProjectDATN.Data.Entities
         [DataType(DataType.Date)]
         public DateTime? BirthDate { get; set; }
        
+        public string? Tinh { get; set; }
+        public string? Huyen { get; set; }
+        public string? Xa { get; set; }
     }
 }

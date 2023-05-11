@@ -51,6 +51,9 @@ namespace ProjectDATN.Web.Controllers
                 vm.Email = khachhang.Email;
                 vm.PhoneNumber = khachhang.PhoneNumber;
                 vm.Address = khachhang.HomeAdress;
+                vm.Tinh = khachhang.Tinh;
+                vm.PhuongXa = khachhang.Xa;
+                vm.Huyen = khachhang.Huyen;
             }
 
             ViewBag.GioHang = cart;
@@ -68,6 +71,8 @@ namespace ProjectDATN.Web.Controllers
             if (taikhoanId != null)
             {
                 var khachhang = _db.Users.AsNoTracking().SingleOrDefault(x => x.Id == Convert.ToString(taikhoanId));
+                
+
                 vm.UserId = khachhang.Id;
                 vm.FullName = khachhang.UserName;
                 vm.Email = khachhang.Email;
@@ -79,10 +84,39 @@ namespace ProjectDATN.Web.Controllers
                 {
                     vm.PhoneNumber = muahang.PhoneNumber;
                 }
-                vm.Address = khachhang.HomeAdress;
-                vm.PhuongXa = muahang.PhuongXa;
-                vm.Tinh = muahang.Tinh;
-                vm.Huyen = muahang.Huyen;
+                if(khachhang.HomeAdress != null)
+                {
+                    vm.Address = muahang.Address;
+                }
+                else
+                {
+                    vm.Address = khachhang.HomeAdress;
+                }
+                
+                if(khachhang.Xa == null)
+                {
+                    vm.PhuongXa = muahang.PhuongXa;
+                }
+                else
+                {
+                    vm.PhuongXa = khachhang.Xa;
+                }
+                if (khachhang.Tinh == null)
+                {
+                    vm.Tinh = muahang.Tinh;
+                }
+                else
+                {
+                    vm.Tinh = khachhang.Tinh;
+                }
+                if (khachhang.Huyen == null)
+                {
+                    vm.Tinh = muahang.Tinh;
+                }
+                else
+                {
+                    vm.Huyen = khachhang.Huyen;
+                }
                 vm.Payment = muahang.Payment;
                 if (muahang.Payment.Equals("cod"))
                 {
@@ -92,6 +126,12 @@ namespace ProjectDATN.Web.Controllers
                 {
                     vm.Payment = Data.Enums.PaymentStatus.vnpay;
                 }
+                khachhang.HomeAdress = muahang.Address;
+                khachhang.PhoneNumber = muahang.PhoneNumber;
+                khachhang.Tinh = muahang.Tinh;
+                khachhang.Huyen = muahang.Huyen;
+                khachhang.Xa = muahang.PhuongXa;
+                _db.SaveChanges();
             }
 
             try
@@ -142,14 +182,16 @@ namespace ProjectDATN.Web.Controllers
 
                 if (form["PaymentMethod"] == "cod")
                 {
-                    _notyfService.Success("Đơn hàng đã đặt thành công");
-                    
-
+                    donhang.Payment = PaymentStatus.cod;
+                    _db.SaveChanges();
+                    //_notyfService.Success("Đơn hàng đã đặt thành công");
                     return RedirectToAction("Success");
                 }
                 else
                 {
                     var url = _vnPayService.CreatePaymentUrl(donhang, HttpContext);
+                    donhang.Payment = PaymentStatus.vnpay;
+                    _db.SaveChanges();
 
                     return Redirect(url);
                    // _notyfService.Success("Thanh toán bằng VNPAY ở đây");
@@ -172,6 +214,10 @@ namespace ProjectDATN.Web.Controllers
         {
             var response = _vnPayService.PaymentExecute(Request.Query);
 
+            if(response.UserName == "falsefalse")
+            {
+                return RedirectToAction("Fail");
+            }
             //return Json(response);
             return RedirectToAction("Success");
         }
@@ -206,6 +252,11 @@ namespace ProjectDATN.Web.Controllers
             }
         }
 
+
+        public ActionResult Fail()
+        {
+            return View();
+        }
         //public ThanhToanOnl()
         //{
         //    var cartItems = HttpContext.Session.Get<List<CartItem>>("GioHang");
